@@ -1,10 +1,14 @@
-import HomeLayout from "@/Layouts/HomeLayout";
-import React from "react";
 import Content from "@/Layouts/Content";
+import HomeLayout from "@/Layouts/HomeLayout";
+import { Head } from "@inertiajs/inertia-react";
 
-export default function Show() {
+const Show = () => {
     return (
         <div>
+            <Head>
+                <title>Lowongan Kerja PT Eco Paper Indonesia Subang</title>
+            </Head>
+
             <div className="alert alert-warning mt-2" role="alert">
                 <marquee>
                     <i className="fas fa-bullhorn" /> Tahapan seleksi
@@ -124,5 +128,7 @@ export default function Show() {
             </div>
         </div>
     );
-}
+};
+
+export default Show;
 Show.layout = (page) => <HomeLayout children={page} />;

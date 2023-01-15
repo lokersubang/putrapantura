@@ -1,9 +1,10 @@
 import Jumbotron from "@/Components/Jumbotron";
+import Pagination from "@/Components/Pagination";
 import HomeLayout from "@/Layouts/HomeLayout";
 import Post from "@/Layouts/Post";
 import { Head } from "@inertiajs/inertia-react";
 
-export default function Index() {
+const Index = () => {
     return (
         <div>
             <Head>
@@ -12,7 +13,9 @@ export default function Index() {
                     Sekitarnya
                 </title>
             </Head>
+
             <Jumbotron />
+
             <div className="mt-3 prose max-w-none text-lg text-blue-900">
                 <h3 className="border-b pb-2 border-dashed  m-0 fw-bold">
                     Loker Terbaru
@@ -50,37 +53,11 @@ export default function Index() {
                     <Post />
                 </div>
             </div>
-            <nav aria-label="Page navigation example mt-4 ">
-                <ul className="pagination">
-                    <li className="page-item p-1">
-                        <a className="page-link" href="#">
-                            Previous
-                        </a>
-                    </li>
-                    <li className="page-item p-1">
-                        <a className="page-link" href="#">
-                            1
-                        </a>
-                    </li>
-                    <li className="page-item p-1">
-                        <a className="page-link" href="#">
-                            2
-                        </a>
-                    </li>
-                    <li className="page-item p-1">
-                        <a className="page-link" href="#">
-                            3
-                        </a>
-                    </li>
-                    <li className="page-item p-1">
-                        <a className="page-link" href="#">
-                            Next
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <Pagination />
         </div>
     );
-}
+};
+
+export default Index;
 
 Index.layout = (page) => <HomeLayout children={page} />;
