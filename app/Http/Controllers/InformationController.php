@@ -16,6 +16,11 @@ class InformationController extends Controller
         return inertia('Information/Contact');
     }
 
+    public function privacyPolicy()
+    {
+        return inertia('Information/Privacy');
+    }
+
     public function disclaimer()
     {
         return inertia('Information/Disclaimer');

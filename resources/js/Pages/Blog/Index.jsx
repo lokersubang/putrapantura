@@ -1,10 +1,17 @@
 import Jumbotron from "@/Components/Jumbotron";
 import HomeLayout from "@/Layouts/HomeLayout";
 import Post from "@/Layouts/Post";
+import { Head } from "@inertiajs/inertia-react";
 
 export default function Index() {
     return (
         <div>
+            <Head>
+                <title>
+                    Loker Subang - Informasi Lowongan Kerja Subang dan
+                    Sekitarnya
+                </title>
+            </Head>
             <Jumbotron />
             <div className="mt-3 prose max-w-none text-lg text-blue-900">
                 <h3 className="border-b pb-2 border-dashed  m-0 fw-bold">

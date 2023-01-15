@@ -224,6 +224,13 @@ export default function Navbar() {
                             Contact
                         </Link>
                         <Link
+                            href={route("privacyPolicy")}
+                            className="nav-link"
+                            as="a"
+                        >
+                            Privacy Policy
+                        </Link>
+                        <Link
                             href={route("disclaimer")}
                             className="nav-link text-decoration-none"
                             as="a"

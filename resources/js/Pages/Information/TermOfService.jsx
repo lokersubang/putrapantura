@@ -1,9 +1,8 @@
 import Content from "@/Layouts/Content";
 import HomeLayout from "@/Layouts/HomeLayout";
 import { Head } from "@inertiajs/inertia-react";
-import React from "react";
 
-export default function TermOfService() {
+const TermOfService = () => {
     return (
         <div>
             <Head>
@@ -121,5 +120,7 @@ export default function TermOfService() {
             </div>
         </div>
     );
-}
+};
+
+export default TermOfService;
 TermOfService.layout = (page) => <HomeLayout children={page} />;

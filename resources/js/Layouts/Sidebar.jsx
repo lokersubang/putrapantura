@@ -11,7 +11,7 @@ export default function Sidebar() {
                         placeholder="Cari lowongan"
                     />
                     <span className="btn btn-primary" id="basic-addon2">
-                        <i className="fa-solid fa-magnifying-glass"></i>
+                        <i className="fa-solid fa-magnifying-glass mt-1"></i>
                     </span>
                 </div>
             </div>

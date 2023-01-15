@@ -24,6 +24,7 @@ Route::get('detail', [LokerController::class, 'show'])->name('show');
 // Information
 Route::get('about', [InformationController::class, 'about'])->name('about');
 Route::get('contact', [InformationController::class, 'contact'])->name('contact');
+Route::get('privacy-policy', [InformationController::class, 'privacyPolicy'])->name('privacyPolicy');
 Route::get('disclaimer', [InformationController::class, 'disclaimer'])->name('disclaimer');
 Route::get('term-of-service', [InformationController::class, 'termofservice'])->name('termOfService');
 Route::get('faq', [InformationController::class, 'faq'])->name('faq');

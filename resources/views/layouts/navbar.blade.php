@@ -8,7 +8,10 @@
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href={{ route('home') }}>Home</a>
+                    <a class="nav-link active" aria-current="page" href={{ route('home') }}>
+                        <i class="fa-solid fa-house"></i>
+                        Home
+                    </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"

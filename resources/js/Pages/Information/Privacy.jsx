@@ -1,16 +1,17 @@
 import Content from "@/Layouts/Content";
 import HomeLayout from "@/Layouts/HomeLayout";
 import { Head } from "@inertiajs/inertia-react";
+import React from "react";
 
-const Disclaimer = () => {
+const Privacy = () => {
     return (
         <div>
             <Head>
-                <title>Disclaimer</title>
+                <title>Privacy Policy</title>
             </Head>
             <div className="p-4 rounded bg-white shadow-sm ">
                 <Content>
-                    <h1>Disclaimer</h1>
+                    <h1>Kebijakan Privasi untuk lokersubang.com</h1>
                     <p>
                         Di lokersubang.com, dapat diakses dari lokersubang.com,
                         salah satu prioritas utama kami adalah privasi
@@ -283,5 +284,5 @@ const Disclaimer = () => {
     );
 };
 
-export default Disclaimer;
-Disclaimer.layout = (page) => <HomeLayout children={page} />;
+export default Privacy;
+Privacy.layout = (page) => <HomeLayout children={page} />;

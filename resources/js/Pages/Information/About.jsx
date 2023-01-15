@@ -1,9 +1,8 @@
 import Content from "@/Layouts/Content";
 import HomeLayout from "@/Layouts/HomeLayout";
 import { Head } from "@inertiajs/inertia-react";
-import React from "react";
 
-export default function About() {
+const About = () => {
     return (
         <div>
             <Head>
@@ -39,5 +38,8 @@ export default function About() {
             </div>
         </div>
     );
-}
+};
+
+export default About;
+
 About.layout = (page) => <HomeLayout children={page} />;
