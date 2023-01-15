@@ -32,12 +32,14 @@ Route::get('faq', [InformationController::class, 'faq'])->name('faq');
 
 
 
-Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     // Post
-    Route::get('posting-lowongan', [PostController::class, 'create'])->name('post.create');
-    Route::post('posting-lowongan', [PostController::class, 'store'])->name('post.store');
+    Route::get('tulis-lowongan', [PostController::class, 'create'])->name('post.create');
+    Route::post('tulis-lowongan', [PostController::class, 'store'])->name('post.store');
 
     // Profil
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

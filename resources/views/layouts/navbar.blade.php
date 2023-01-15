@@ -1,40 +1,103 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
     <div class="container">
-        <a class="navbar-brand" href="#">Dashboard</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href={{ route('home') }}> <img src="/img/logo.png" width="135"></img></a>
+        <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link active" aria-current="page" href={{ route('home') }}>Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dropdown
-                    </a>
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                        aria-expanded="false">Lowongan Kerja</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Subang</a></li>
+                        <li><a class="dropdown-item" href="#">Luar Kota</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">CPNS</a></li>
+                        <li><a class="dropdown-item" href="#">BUMN</a></li>
+                        <li><a class="dropdown-item" href="#">Freelance</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link" href="#">Magang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pelatihan</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Informasi</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-user"></i> {{ Auth::user()->name }}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href={{ route('dashboard') }}>
+                                <i class="fa-solid fa-home"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa-solid fa-pencil"></i>
+                                Tulis Lowongan
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa-solid fa-address-book"></i>
+                                Data Lowongan
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href={{ route('profile.edit') }}>
+                                <i class="fa-solid fa-user-gear"></i>
+                                Profile
+                            </a>
+                        </li>
+                        <li>
+                            <form action="{{ route('logout') }}" method="post">
+                                @csrf
+                                <button class="dropdown-item" type="submit">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                    Logout
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
         </div>
     </div>
 </nav>
+
+<div class="nav-scroller bg-body shadow-sm">
+    <div class="container">
+        <nav class="nav" aria-label="Secondary navigation">
+            {{-- <a class="nav-link" href="#">
+                Friends
+                <span class="badge text-bg-light rounded-pill align-text-bottom">27</span>
+            </a> --}}
+            <a class="nav-link active" aria-current="page" href="#">About</a>
+            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#">Privacy Policy</a>
+            <a class="nav-link" href="#">Disclaimer</a>
+            <a class="nav-link" href="#">Ternm Of Service</a>
+            <a class="nav-link" href="#">FAQ?</a>
+        </nav>
+    </div>
+</div>

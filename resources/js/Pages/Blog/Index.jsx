@@ -1,7 +1,6 @@
 import Jumbotron from "@/Components/Jumbotron";
 import HomeLayout from "@/Layouts/HomeLayout";
 import Post from "@/Layouts/Post";
-import React from "react";
 
 export default function Index() {
     return (

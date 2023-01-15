@@ -1,10 +1,14 @@
 import Content from "@/Layouts/Content";
 import HomeLayout from "@/Layouts/HomeLayout";
+import { Head } from "@inertiajs/inertia-react";
 import React from "react";
 
 export default function TermOfService() {
     return (
         <div>
+            <Head>
+                <title>Term Of Service</title>
+            </Head>
             <div className="p-4 rounded bg-white shadow-sm ">
                 <Content>
                     <h1>Term Of Service</h1>

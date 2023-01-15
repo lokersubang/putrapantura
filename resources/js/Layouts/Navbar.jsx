@@ -132,34 +132,34 @@ export default function Navbar() {
                                     </a>
                                     <ul className="dropdown-menu dropdown-end">
                                         <li>
-                                            <a
+                                            <Link
                                                 className="dropdown-item"
                                                 href={route("dashboard")}
                                                 as="a"
                                             >
                                                 <i className="fa-solid fa-home"></i>{" "}
                                                 Dashboard
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <Link
+                                            <a
                                                 className="dropdown-item"
                                                 href={route("post.create")}
                                                 as="a"
                                             >
                                                 <i className="fa-solid fa-pencil"></i>{" "}
-                                                Posting Lowongan
-                                            </Link>
+                                                Tulis Lowongan
+                                            </a>
                                         </li>
                                         <li>
-                                            <Link
+                                            <a
                                                 className="dropdown-item"
                                                 href={route("post.create")}
                                                 as="a"
                                             >
                                                 <i className="fa-solid fa-address-book"></i>{" "}
-                                                Semua Postingan
-                                            </Link>
+                                                Data Lowongan
+                                            </a>
                                         </li>
                                         <li>
                                             <hr className="dropdown-divider" />

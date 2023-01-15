@@ -8,7 +8,7 @@ class PostController extends Controller
 {
     public function create()
     {
-        return inertia('Post/Create');
+        return view('admin.create');
     }
 
     public function store(Request $request)
