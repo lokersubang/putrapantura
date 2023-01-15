@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{InformationController, LokerController, PostController, ProfileController};
+use App\Http\Controllers\{AdminController, InformationController, LokerController, PostController, ProfileController};
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -32,9 +32,7 @@ Route::get('faq', [InformationController::class, 'faq'])->name('faq');
 
 
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     // Post

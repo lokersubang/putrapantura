@@ -132,14 +132,14 @@ export default function Navbar() {
                                     </a>
                                     <ul className="dropdown-menu dropdown-end">
                                         <li>
-                                            <Link
+                                            <a
                                                 className="dropdown-item"
                                                 href={route("dashboard")}
                                                 as="a"
                                             >
                                                 <i className="fa-solid fa-home"></i>{" "}
                                                 Dashboard
-                                            </Link>
+                                            </a>
                                         </li>
                                         <li>
                                             <Link
