@@ -25,8 +25,6 @@
     },
     "dependencies": {
         "bootstrap": "^5.2.3",
-        "popper.js": "^1.16.1",
-        "suneditor": "^2.44.3",
-        "suneditor-react": "^3.4.1"
+        "popper.js": "^1.16.1"
     }
 }
