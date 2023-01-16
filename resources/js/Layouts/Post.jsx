@@ -1,12 +1,12 @@
 import { Link } from "@inertiajs/inertia-react";
 import React from "react";
 
-export default function Post() {
+export default function Post(props) {
     return (
         <div>
             <div className="d-flex text-muted pt-3">
                 <img
-                    src="/img/img2.jpg"
+                    src={props.img}
                     alt=""
                     loading="lazy"
                     className="bd-placeholder-img flex-shrink-0 me-2 rounded p-2 object-center w-20 h-20"
@@ -21,7 +21,7 @@ export default function Post() {
                             <strong className="text-gray-dark ">
                                 {/* <div className="text-success">subang</div> */}
                                 <div className="d-block mt-1 leading-relaxed">
-                                    Lowongan Kerja PT Eco Paper Indonesia Subang
+                                    {props.title}
                                 </div>
                             </strong>
                         </Link>

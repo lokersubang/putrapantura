@@ -15,6 +15,12 @@
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/offcanvas.css" rel="stylesheet">
+
+    <script src="/ckeditor/ckeditor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+    <script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
+
 </head>
 
 <body class="bg-light" style="font-family: 'Nunito'">
@@ -26,8 +32,24 @@
     </main>
 
 
-    <script src="/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/offcanvas.js"></script>
 </body>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/offcanvas.js"></script>
+
+<script>
+    const options = {
+        filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+        filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+        filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+        filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+    };
+    CKEDITOR.replace('editor1', options);
+
+    // Load Filemanager
+    var route_prefix = "laravel-filemanager";
+    $('#lfm').filemanager('image', {
+        prefix: route_prefix
+    });
+</script>
 
 </html>

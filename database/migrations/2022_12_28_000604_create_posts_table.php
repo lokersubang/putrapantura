@@ -19,8 +19,9 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('description')->nullable();
             $table->longText('body');
-            $table->string('company');
-            $table->string('address');
+            $table->string('company')->nullable();
+            $table->string('address')->nullable();
+            $table->string('image');
             $table->timestamps();
         });
     }

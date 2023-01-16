@@ -4,7 +4,7 @@ import HomeLayout from "@/Layouts/HomeLayout";
 import Post from "@/Layouts/Post";
 import { Head } from "@inertiajs/inertia-react";
 
-const Index = () => {
+const Index = ({ lokers }) => {
     return (
         <div>
             <Head>
@@ -22,36 +22,11 @@ const Index = () => {
                 </h3>
             </div>
             <div className="row mb-3">
-                <div className="col-md-6">
-                    <Post />
-                </div>
-                <div className="col-md-6">
-                    <Post />
-                </div>
-                <div className="col-md-6">
-                    <Post />
-                </div>
-                <div className="col-md-6">
-                    <Post />
-                </div>
-                <div className="col-md-6">
-                    <Post />
-                </div>
-                <div className="col-md-6">
-                    <Post />
-                </div>
-                <div className="col-md-6">
-                    <Post />
-                </div>
-                <div className="col-md-6">
-                    <Post />
-                </div>
-                <div className="col-md-6">
-                    <Post />
-                </div>
-                <div className="col-md-6">
-                    <Post />
-                </div>
+                {lokers.map((loker) => (
+                    <div className="col-md-6" key={loker.id}>
+                        <Post title={loker.title} img={loker.image} />
+                    </div>
+                ))}
             </div>
             <Pagination />
         </div>

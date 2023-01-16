@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class LokerController extends Controller
@@ -14,7 +15,8 @@ class LokerController extends Controller
      */
     public function index(Request $request)
     {
-        return inertia('Blog/Index');
+        // dd(Post::all());
+        return inertia('Blog/Index', ['lokers' => Post::orderBy('id', 'DESC')->get()]);
     }
 
     public function show()

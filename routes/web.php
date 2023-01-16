@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{AdminController, InformationController, LokerController, PostController, ProfileController};
+use App\Http\Controllers\{AdminController, ArticleController, InformationController, LokerController, PostController, ProfileController};
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -16,6 +16,10 @@ use Inertia\Inertia;
 |
 */
 
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
 Route::get('/', [LokerController::class, 'index'])->name('home');
 Route::get('detail', [LokerController::class, 'show'])->name('show');
 
@@ -29,7 +33,9 @@ Route::get('disclaimer', [InformationController::class, 'disclaimer'])->name('di
 Route::get('term-of-service', [InformationController::class, 'termofservice'])->name('termOfService');
 Route::get('faq', [InformationController::class, 'faq'])->name('faq');
 
-
+// Article Add
+// Route::get('tulis-lowongan', [ArticleController::class, 'create'])->name('article.create');
+// Route::post('tulis-lowongan', [ArticleController::class, 'store'])->name('article.store');
 
 
 
@@ -39,8 +45,8 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     // Post
-    Route::get('tulis-lowongan', [PostController::class, 'create'])->name('post.create');
-    Route::post('tulis-lowongan', [PostController::class, 'store'])->name('post.store');
+    Route::get('tulis-lowongan', [ArticleController::class, 'create'])->name('article.create');
+    Route::post('tulis-lowongan', [ArticleController::class, 'store'])->name('article.store');
 
     // Profil
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
