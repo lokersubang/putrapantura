@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{AdminController, ArticleController, InformationController, LokerController, PostController, ProfileController};
+use App\Http\Controllers\{ArticleController, InformationController, LokerController, PostController, ProfileController};
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -32,10 +32,6 @@ Route::get('privacy-policy', [InformationController::class, 'privacyPolicy'])->n
 Route::get('disclaimer', [InformationController::class, 'disclaimer'])->name('disclaimer');
 Route::get('term-of-service', [InformationController::class, 'termofservice'])->name('termOfService');
 Route::get('faq', [InformationController::class, 'faq'])->name('faq');
-
-// Article Add
-// Route::get('tulis-lowongan', [ArticleController::class, 'create'])->name('article.create');
-// Route::post('tulis-lowongan', [ArticleController::class, 'store'])->name('article.store');
 
 
 

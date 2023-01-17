@@ -24,7 +24,11 @@ const Index = ({ lokers }) => {
             <div className="row mb-3">
                 {lokers.map((loker) => (
                     <div className="col-md-6" key={loker.id}>
-                        <Post title={loker.title} img={loker.image} />
+                        <Post
+                            title={loker.title}
+                            img={loker.image}
+                            time={loker.created_at}
+                        />
                     </div>
                 ))}
             </div>

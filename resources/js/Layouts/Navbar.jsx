@@ -57,7 +57,7 @@ export default function Navbar() {
                                             className="dropdown-item"
                                             href="#"
                                         >
-                                            Subang
+                                            Loker Subang
                                         </Link>
                                     </li>
                                     <li>

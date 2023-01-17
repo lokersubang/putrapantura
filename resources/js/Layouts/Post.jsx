@@ -1,4 +1,5 @@
 import { Link } from "@inertiajs/inertia-react";
+import moment from "moment/moment";
 import React from "react";
 
 export default function Post(props) {
@@ -27,7 +28,9 @@ export default function Post(props) {
                         </Link>
                     </div>
                     <span className="d-block mt-1">
-                        <small>4 hours ago</small>{" "}
+                        <small>
+                            {moment(props.time).fromNow()}
+                        </small>
                     </span>
                 </div>
             </div>

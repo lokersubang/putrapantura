@@ -38,18 +38,19 @@
                             <div class="col-md-4">
                                 <div class="mb-3">
                                     <label for="kategori" class="form-label">Kategori</label>
-                                    <select id="kategori" class="form-select  @error('category') is-invalid @enderror"
-                                        name="category">
+                                    <select id="kategori"
+                                        class="form-select  @error('category_id') is-invalid @enderror"
+                                        name="category_id">
                                         <option selected>Pilih...</option>
                                         <option value="1">CPNS</option>
                                         <option value="2">BUMN</option>
                                         <option value="3">Instansi</option>
                                         <option value="4">Loker Subang</option>
-                                        <option value="4">Luar Kota</option>
-                                        <option value="4">Freelance</option>
-                                        <option value="4">Magang</option>
-                                        <option value="4">Pelatihan</option>
-                                        <option value="4">Informasi</option>
+                                        <option value="5">Luar Kota</option>
+                                        <option value="6">Freelance</option>
+                                        <option value="7">Magang</option>
+                                        <option value="8">Pelatihan</option>
+                                        <option value="9">Informasi</option>
                                     </select>
                                     @error('category')
                                         <div class="invalid-feedback">{{ $message }}</div>
