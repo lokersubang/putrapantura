@@ -16,12 +16,13 @@ use Inertia\Inertia;
 |
 */
 
+
+
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
-Route::get('/', [LokerController::class, 'index'])->name('home');
-Route::get('detail', [LokerController::class, 'show'])->name('show');
+
 
 
 
@@ -51,3 +52,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
+
+Route::get('/', [LokerController::class, 'index'])->name('home');
+Route::get('/{post:slug}.html', [LokerController::class, 'show'])->name('post.show');

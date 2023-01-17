@@ -28,6 +28,7 @@ const Index = ({ lokers }) => {
                             title={loker.title}
                             img={loker.image}
                             time={loker.created_at}
+                            slug={loker.slug}
                         />
                     </div>
                 ))}

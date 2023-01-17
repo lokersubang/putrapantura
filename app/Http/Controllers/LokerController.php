@@ -19,8 +19,9 @@ class LokerController extends Controller
         return inertia('Blog/Index', ['lokers' => Post::with(['category', 'user'])->latest()->get()]);
     }
 
-    public function show()
+    public function show(Post $post)
     {
-        return inertia('Blog/Show');
+
+        return inertia('Blog/Show', ['article' => $post->load('category', 'user')]);
     }
 }

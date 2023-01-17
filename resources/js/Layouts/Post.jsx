@@ -16,7 +16,7 @@ export default function Post(props) {
                 <div className="pb-3 mb-0 small lh-sm border-bottom w-100">
                     <div className="d-flex justify-content-between mt-2">
                         <Link
-                            href={route("show")}
+                            href={route("post.show", props.slug)}
                             className="text-slate-900 hover:text-green-400"
                         >
                             <strong className="text-gray-dark ">
@@ -28,9 +28,7 @@ export default function Post(props) {
                         </Link>
                     </div>
                     <span className="d-block mt-1">
-                        <small>
-                            {moment(props.time).fromNow()}
-                        </small>
+                        <small>{moment(props.time).fromNow()}</small>
                     </span>
                 </div>
             </div>
