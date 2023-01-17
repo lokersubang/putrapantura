@@ -16,7 +16,7 @@ class LokerController extends Controller
     public function index(Request $request)
     {
         // dd(Post::all());
-        return inertia('Blog/Index', ['lokers' => Post::with(['category'])->latest()->get()]);
+        return inertia('Blog/Index', ['lokers' => Post::with(['category', 'user'])->latest()->get()]);
     }
 
     public function show()

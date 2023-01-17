@@ -10,8 +10,11 @@
                             <div class="col-md-8">
                                 <div class="mb-3">
                                     <label for="title" class="form-label">Judul lowongan</label>
+                                    <input type="hidden" class="form-control @error('user_id') is-invalid @enderror"
+                                        id="user_id" name="user_id" value={{ Auth::user()->id }}>
                                     <input type="text" class="form-control @error('title') is-invalid @enderror"
-                                        id="title" name="title" placeholder="Masukan judul">
+                                        id="title" name="title" placeholder="Masukan judul"
+                                        value={{ old('title') }}>
                                     @error('title')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -19,7 +22,7 @@
                                 <div class="mb-3">
                                     <label for="deskripsi" class="form-label">Deskripsi</label>
                                     <textarea name="description" class="form-control  @error('description') is-invalid @enderror" id="deskripsi"
-                                        cols="3" rows="3" style="resize: none"></textarea>
+                                        cols="3" rows="3" style="resize: none">{{ old('description') }}</textarea>
                                     @error('description')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -27,7 +30,7 @@
                                 <div class="mb-3">
                                     <label for="body" class="form-label">Konten</label>
                                     <textarea name="body" id="editor1" class="form-control  @error('body') is-invalid @enderror" id="body"
-                                        cols="3" rows="3" style="resize: none"></textarea>
+                                        cols="3" rows="3" style="resize: none">{{ old('body') }}</textarea>
 
                                     @error('body')
                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -36,6 +39,24 @@
                                 </div>
                             </div>
                             <div class="col-md-4">
+                                <div class="mb-3">
+                                    <label for="body" class="form-label">Nama Perusahaan</label>
+                                    <input type="text" class="form-control @error('company') is-invalid @enderror"
+                                        id="company" name="company" placeholder="Masukan nama"
+                                        value={{ old('company') }}>
+                                    @error('company')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="mb-3">
+                                    <label for="body" class="form-label">Alamat Perusahaan</label>
+                                    <input type="text" class="form-control @error('address') is-invalid @enderror"
+                                        id="address" name="address" placeholder="Masukan alamat"
+                                        value={{ old('address') }}>
+                                    @error('address')
+                                        <div class="invalid-feedback">{{ $message }}</div>
+                                    @enderror
+                                </div>
                                 <div class="mb-3">
                                     <label for="kategori" class="form-label">Kategori</label>
                                     <select id="kategori"
@@ -52,7 +73,7 @@
                                         <option value="8">Pelatihan</option>
                                         <option value="9">Informasi</option>
                                     </select>
-                                    @error('category')
+                                    @error('category_id')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
                                 </div>
