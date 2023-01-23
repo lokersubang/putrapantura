@@ -12,7 +12,7 @@ class DataArticleController extends Controller
 {
     public function index()
     {
-        return view('admin.article', ['posts' => Post::latest()->filter(request(['search']))->with('user', 'category')->fastPaginate(9)->withQueryString()]);
+        return view('admin.article', ['posts' => Post::latest()->filter(request(['search']))->with(['user', 'category'])->fastPaginate(9)->withQueryString()]);
     }
 
     public function edit($id)

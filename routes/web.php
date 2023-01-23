@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\{ArticleController, DataArticleController, InformationController, LokerController, PostController, ProfileController};
+use App\Http\Controllers\{ArticleController, CategoryController, DataArticleController, InformationController, LokerController, PostController, ProfileController};
+use App\Models\Category;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -63,6 +64,18 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 
+// Home Page
 Route::get('/', [LokerController::class, 'index'])->name('home');
 Route::post('/', [LokerController::class, 'index'])->name('home.post');
 Route::get('/{post:slug}.html', [LokerController::class, 'show'])->name('post.show');
+
+// Category
+Route::get('kategori', [CategoryController::class, 'index'])->name('category');
+// Route::get('kategori/{category:slug}', function (Category $category) {
+//     return inertia('Blog/Category/Show', [
+//         'title' => $category->name,
+//         'lokers' => $category->post::paginate(5),
+//         'category' => $category->name
+//     ]);
+// })->name('category.show');
+Route::get('kategori/{category:slug}', [CategoryController::class, 'show'])->name('category.show');

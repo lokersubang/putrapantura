@@ -6,6 +6,7 @@ const Sidebar = () => {
 
     const { data, setData, post, reset, processing, errors } = useForm({
         search: "",
+        category: "",
     });
 
     function submit(e) {
@@ -29,6 +30,7 @@ const Sidebar = () => {
                                     setData("search", e.target.value)
                                 }
                             />
+
                             <button
                                 type="submit"
                                 className="btn btn-outline-primary"

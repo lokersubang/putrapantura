@@ -9,7 +9,7 @@ export default function Jumbotron() {
                         Loker Subang
                     </h1>
                     <h2 className="mt-0 text-lg">
-                        Situs Informasi Lowongan Kerja Subang dan Sekitarnya.
+                        Informasi Lowongan Kerja Subang dan Sekitarnya.
                     </h2>
                 </div>
             </div>

@@ -6,22 +6,33 @@ import { Head } from "@inertiajs/inertia-react";
 
 const Index = (props) => {
     const { data: lokers, links, from } = props.lokers;
+    const { title } = props;
     return (
         <div>
             <Head>
-                <title>
-                    Loker Subang - Informasi Lowongan Kerja Subang dan
-                    Sekitarnya
-                </title>
+                {title == null ? (
+                    <title>
+                        Loker Subang - Informasi Lowongan Kerja Subang dan
+                        Sekitarnya.
+                    </title>
+                ) : (
+                    <title>{title}</title>
+                )}
                 <link rel="icon" href="/img/icon.ico" />
             </Head>
 
             <Jumbotron />
 
             <div className="mt-3 prose max-w-none text-lg text-blue-900">
-                <h3 className="border-b pb-2 border-dashed  m-0 fw-bold">
-                    Loker Terbaru
-                </h3>
+                {title == null ? (
+                    <h3 className="border-b pb-2 border-dashed  m-0 fw-bold">
+                        Loker Terbaru
+                    </h3>
+                ) : (
+                    <h3 className="border-b pb-2 border-dashed  m-0 fw-bold">
+                        {title}
+                    </h3>
+                )}
             </div>
             <div className="row mb-3">
                 {lokers.length !== 0 ? (
