@@ -1,23 +1,42 @@
-import { Link, usePage } from "@inertiajs/inertia-react";
+import { Link, useForm, usePage } from "@inertiajs/inertia-react";
 import React from "react";
 
 const Sidebar = () => {
     const { list } = usePage().props;
-    console.log(list);
+
+    const { data, setData, post, reset, processing, errors } = useForm({
+        search: "",
+    });
+
+    function submit(e) {
+        e.preventDefault();
+        post(route("home"));
+        reset();
+    }
+
     return (
         <div>
             <div className="prose max-w-none">
                 <div className="mb-3 p-3 bg-body rounded shadow-sm">
-                    <div className="input-group">
-                        <input
-                            type="text"
-                            className="form-control rounded-lg border-gray-300"
-                            placeholder="Cari lowongan"
-                        />
-                        <span className="btn btn-primary" id="basic-addon2">
-                            <i className="fa-solid fa-magnifying-glass mt-1"></i>
-                        </span>
-                    </div>
+                    <form onSubmit={submit}>
+                        <div className="input-group">
+                            <input
+                                type="text"
+                                className="form-control rounded-lg border-gray-300"
+                                placeholder="Cari lowongan"
+                                value={data.search}
+                                onChange={(e) =>
+                                    setData("search", e.target.value)
+                                }
+                            />
+                            <button
+                                type="submit"
+                                className="btn btn-outline-primary"
+                            >
+                                <i className="fa-solid fa-magnifying-glass mt-1"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
 
                 <div className="mb-3 p-3 bg-body rounded shadow-sm">
@@ -33,7 +52,7 @@ const Sidebar = () => {
                                 <Link
                                     as="a"
                                     href={route("post.show", item.slug)}
-                                    className="text-decoration-none hover:text-green-400"
+                                    className="text-decoration-none text-gray-700 hover:text-green-400"
                                 >
                                     {item.title}
                                 </Link>

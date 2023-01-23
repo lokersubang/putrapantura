@@ -6,12 +6,14 @@ export default function Post(props) {
     return (
         <div>
             <div className="d-flex text-muted pt-3">
-                <img
-                    src={props.img}
-                    alt=""
-                    loading="lazy"
-                    className="bd-placeholder-img flex-shrink-0 me-2 rounded p-2 object-center w-20 h-20"
-                />
+                <Link href={route("post.show", props.slug)} className="mr-2">
+                    <img
+                        src={props.img}
+                        alt={props.title}
+                        loading="lazy"
+                        className="bd-placeholder-img flex-shrink-0 me-2 rounded p-2 object-center w-20 h-20"
+                    />
+                </Link>
 
                 <div className="pb-3 mb-0 small lh-sm border-bottom w-100">
                     <div className="d-flex justify-content-between mt-2">

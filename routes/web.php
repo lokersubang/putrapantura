@@ -64,4 +64,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__ . '/auth.php';
 
 Route::get('/', [LokerController::class, 'index'])->name('home');
+Route::post('/', [LokerController::class, 'index'])->name('home.post');
 Route::get('/{post:slug}.html', [LokerController::class, 'show'])->name('post.show');

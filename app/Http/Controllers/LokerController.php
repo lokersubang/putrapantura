@@ -15,12 +15,12 @@ class LokerController extends Controller
      */
     public function index(Request $request)
     {
-        return inertia('Blog/Index', ['lokers' => Post::with(['category', 'user'])->limit(9)->latest()->get()]);
+        // return Post::latest()->filter(request(['search']))->with(['category', 'user'])->fastPaginate(2);
+        return inertia('Blog/Index', ['lokers' => Post::latest()->filter(request(['search']))->with(['category', 'user'])->Paginate(2)]);
     }
 
     public function show(Post $post)
     {
-
         return inertia('Blog/Show', ['article' => $post->load('category', 'user')]);
     }
 }
