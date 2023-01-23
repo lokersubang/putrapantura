@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('image');
             $table->timestamps();
+            $table->softDeletes('deleted_at', 0);
         });
     }
 

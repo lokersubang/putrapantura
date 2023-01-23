@@ -154,7 +154,7 @@ export default function Navbar() {
                                         <li>
                                             <a
                                                 className="dropdown-item"
-                                                href={route("article.create")}
+                                                href={route("article.index")}
                                                 as="a"
                                             >
                                                 <i className="fa-solid fa-address-book"></i>{" "}

@@ -8,6 +8,7 @@ const Privacy = () => {
         <div>
             <Head>
                 <title>Privacy Policy</title>
+                <link rel="icon" href="/img/icon.ico" />
             </Head>
             <div className="p-4 rounded bg-white shadow-sm ">
                 <Content>

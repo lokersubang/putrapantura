@@ -3,7 +3,7 @@ import React from "react";
 export default function Jumbotron() {
     return (
         <div>
-            <div className="prose max-w-none p-3 rounded-3 bg-white shadow-sm">
+            <div className="prose max-w-none p-3 rounded-3 bg-slate-200">
                 <div className="container-fluid">
                     <h1 className="mb-0 leading-relaxed font-extrabold text-slate-800">
                         Loker Subang

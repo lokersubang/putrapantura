@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Inertia\Middleware;
 use Tightenco\Ziggy\Ziggy;
 
@@ -43,6 +44,9 @@ class HandleInertiaRequests extends Middleware
                     'location' => $request->url(),
                 ]);
             },
+            'list' => [
+                'sidebar' => DB::table('posts')->limit(5)->latest()->get()
+            ],
         ]);
     }
 }

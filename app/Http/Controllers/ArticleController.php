@@ -16,6 +16,6 @@ class ArticleController extends Controller
     public function store(ArticleRequest $request)
     {
         Post::create($request->all());
-        return back();
+        return back()->with('message', 'Lowongan Kerja Berhasil di Posting');
     }
 }

@@ -12,6 +12,7 @@ const Index = ({ lokers }) => {
                     Loker Subang - Informasi Lowongan Kerja Subang dan
                     Sekitarnya
                 </title>
+                <link rel="icon" href="/img/icon.ico" />
             </Head>
 
             <Jumbotron />
@@ -27,6 +28,7 @@ const Index = ({ lokers }) => {
                         <Post
                             title={loker.title}
                             img={loker.image}
+                            // img={loker.image ?? "/img/404.jpg"}
                             time={loker.created_at}
                             slug={loker.slug}
                         />

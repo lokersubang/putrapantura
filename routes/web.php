@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{ArticleController, InformationController, LokerController, PostController, ProfileController};
+use App\Http\Controllers\{ArticleController, DataArticleController, InformationController, LokerController, PostController, ProfileController};
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -19,6 +19,9 @@ use Inertia\Inertia;
 
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+Route::group(['prefix' => 'data-lowongan/laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
@@ -44,6 +47,13 @@ Route::middleware('auth')->group(function () {
     // Post
     Route::get('tulis-lowongan', [ArticleController::class, 'create'])->name('article.create');
     Route::post('tulis-lowongan', [ArticleController::class, 'store'])->name('article.store');
+
+    // Data Post
+    Route::get('data-lowongan', [DataArticleController::class, 'index'])->name('article.index');
+    Route::get('data-lowongan/{id}/edit', [DataArticleController::class, 'edit'])->name('article.edit');
+    Route::put('data-lowongan/{id}', [DataArticleController::class, 'update'])->name('article.update');
+    Route::delete('data-lowongan/{id}', [DataArticleController::class, 'destroy'])->name('article.delete');
+
 
     // Profil
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

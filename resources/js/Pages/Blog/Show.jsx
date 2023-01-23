@@ -8,6 +8,12 @@ const Show = ({ article }) => {
         <div>
             <Head>
                 <title>{article.title}</title>
+                <link rel="icon" href="/img/icon.ico" />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={article.title} />
+                <meta property="og:description" content={article.description} />
+                <meta property="og:url" content={article.slug} />
+                <meta property="og:image" content={article.image} />
             </Head>
 
             <div className="alert alert-warning mt-2" role="alert">
@@ -20,12 +26,29 @@ const Show = ({ article }) => {
                 <nav aria-label="breadcrumb ">
                     <ol className="breadcrumb">
                         <li className="breadcrumb-item text-sm">Home</li>
-                        <li className="breadcrumb-item text-sm">
+                        <li className="breadcrumb-item active text-sm">
                             {article.title}
                         </li>
                     </ol>
                 </nav>
                 <Content>
+                    <script type="application/ld+json">
+                        {JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "NewsArticle",
+                            headline: article.title,
+                            image: [`/img/${article.image}`],
+                            datePublished: moment(article.created_at).format(),
+                            dateModified: moment(article.created_at).format(),
+                            author: [
+                                {
+                                    "@type": "Person",
+                                    name: "Dadan Nurmaulana",
+                                    url: "https://web.facebook.com/dadannurmaulana",
+                                },
+                            ],
+                        })}
+                    </script>
                     <h1 className="mb-3">{article.title}</h1>
                     <span className="text-sm pe-4">
                         <i className="fa-solid fa-clock"></i>{" "}

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #10172a" aria-label="Main navigation">
     <div class="container">
         <a class="navbar-brand" href={{ route('home') }}> <img src="/img/logo.png" width="135"></img></a>
         <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
@@ -51,13 +51,13 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ route('article.create') }}">
                                 <i class="fa-solid fa-pencil"></i>
                                 Tulis Lowongan
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ route('article.index') }}">
                                 <i class="fa-solid fa-address-book"></i>
                                 Data Lowongan
                             </a>

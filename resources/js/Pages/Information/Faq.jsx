@@ -8,6 +8,7 @@ const Faq = () => {
         <div>
             <Head>
                 <title>FAQ</title>
+                <link rel="icon" href="/img/icon.ico" />
             </Head>
             <div className="p-4 rounded bg-white shadow-sm ">
                 <Content>
