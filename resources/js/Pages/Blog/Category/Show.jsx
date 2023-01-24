@@ -5,7 +5,9 @@ import Post from "@/Layouts/Post";
 import { Head } from "@inertiajs/inertia-react";
 import React from "react";
 
-const Show = ({ title, lokers, category }) => {
+const Show = (props) => {
+    const { data: lokers, links, from } = props.lokers;
+    const { title } = props;
     return (
         <div>
             <Head>
@@ -27,7 +29,7 @@ const Show = ({ title, lokers, category }) => {
                             />
                         </div>
                     ))}
-                    {/* <Pagination links={links} /> */}
+                    <Pagination links={links} />
                 </div>
             </div>
         </div>

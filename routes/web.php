@@ -51,7 +51,7 @@ Route::middleware('auth')->group(function () {
 
     // Data Post
     Route::get('data-lowongan', [DataArticleController::class, 'index'])->name('article.index');
-    Route::get('data-lowongan/{id}/edit', [DataArticleController::class, 'edit'])->name('article.edit');
+    Route::get('data-lowongan/{id}', [DataArticleController::class, 'edit'])->name('article.edit');
     Route::put('data-lowongan/{id}', [DataArticleController::class, 'update'])->name('article.update');
     Route::delete('data-lowongan/{id}', [DataArticleController::class, 'destroy'])->name('article.delete');
 

@@ -17,6 +17,7 @@ class DataArticleController extends Controller
 
     public function edit($id)
     {
+        // dd(Post::where('id', $id)->first());
         return view('admin.edit', ['article' => Post::where('id', $id)->first()]);
     }
 

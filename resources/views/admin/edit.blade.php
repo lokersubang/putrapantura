@@ -21,7 +21,7 @@
                                         id="user_id" name="user_id" value={{ $article->user_id }}>
                                     <input type="text" class="form-control @error('title') is-invalid @enderror"
                                         id="title" name="title" placeholder="Masukan judul"
-                                        value={{ old('title') ?? $article->title }}>
+                                        value="{{ old('title') ?? $article->title }}">
                                     @error('title')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -29,7 +29,7 @@
                                 <div class="mb-3">
                                     <label for="deskripsi" class="form-label">Deskripsi</label>
                                     <textarea name="description" class="form-control  @error('description') is-invalid @enderror" id="deskripsi"
-                                        cols="3" rows="3" style="resize: none">{{ old('description') ?? $article->description }}</textarea>
+                                        cols="3" rows="3" style="resize: none">{{ old('desc') ?? $article->description }}</textarea>
                                     @error('description')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -50,7 +50,7 @@
                                     <label for="body" class="form-label">Nama Perusahaan</label>
                                     <input type="text" class="form-control @error('company') is-invalid @enderror"
                                         id="company" name="company" placeholder="Masukan nama"
-                                        value={{ old('company') ?? $article->company }}>
+                                        value="{{ old('company') ?? $article->company }}">
                                     @error('company')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -59,7 +59,7 @@
                                     <label for="body" class="form-label">Alamat Perusahaan</label>
                                     <input type="text" class="form-control @error('address') is-invalid @enderror"
                                         id="address" name="address" placeholder="Masukan alamat"
-                                        value={{ old('address') ?? $article->address }}>
+                                        value="{{ old('address') ?? $article->address }}">
                                     @error('address')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror

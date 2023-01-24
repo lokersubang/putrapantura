@@ -10,15 +10,29 @@ const Index = (props) => {
     return (
         <div>
             <Head>
-                {title == null ? (
-                    <title>
-                        Loker Subang - Informasi Lowongan Kerja Subang dan
-                        Sekitarnya.
-                    </title>
-                ) : (
-                    <title>{title}</title>
-                )}
+                <title>
+                    Loker Subang - Informasi Lowongan Kerja Subang dan
+                    Sekitarnya.
+                </title>
+                <meta
+                    name="keywords"
+                    content="loker subang, info loker subang, loker karawang, loker purwakarta, loker indramayu, loker majalengka, loker bandung"
+                />
+                <meta
+                    property="og:description"
+                    content="Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang terbaru dan terupdate setiap hari"
+                />
+                <meta name="author" content="Dadan Nurmaulana" />
                 <link rel="icon" href="/img/icon.ico" />
+                <link rel="icon" href="/img/icon.ico" />
+                <meta property="og:type" content="article" />
+                <meta
+                    property="og:title"
+                    content="Loker Subang - Informasi Lowongan Kerja Subang dan
+                    Sekitarnya"
+                />
+                <meta property="og:url" content="https:/lokersubang.com" />
+                <meta property="og:image" content="/img/icon2.png" />
             </Head>
 
             <Jumbotron />

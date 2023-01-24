@@ -55,7 +55,10 @@ export default function Navbar() {
                                         <Link
                                             as="a"
                                             className="dropdown-item"
-                                            href="#"
+                                            href={route(
+                                                "category.show",
+                                                "loker-subang"
+                                            )}
                                         >
                                             Loker Subang
                                         </Link>
@@ -64,7 +67,10 @@ export default function Navbar() {
                                         <Link
                                             as="a"
                                             className="dropdown-item"
-                                            href="#"
+                                            href={route(
+                                                "category.show",
+                                                "luar-kota"
+                                            )}
                                         >
                                             Luar Kota
                                         </Link>
@@ -76,7 +82,10 @@ export default function Navbar() {
                                         <Link
                                             as="a"
                                             className="dropdown-item"
-                                            href="#"
+                                            href={route(
+                                                "category.show",
+                                                "bumn"
+                                            )}
                                         >
                                             BUMN
                                         </Link>
@@ -85,7 +94,10 @@ export default function Navbar() {
                                         <Link
                                             as="a"
                                             className="dropdown-item"
-                                            href="#"
+                                            href={route(
+                                                "category.show",
+                                                "cpns"
+                                            )}
                                         >
                                             CPNS
                                         </Link>
@@ -94,7 +106,10 @@ export default function Navbar() {
                                         <Link
                                             as="a"
                                             className="dropdown-item"
-                                            href="#"
+                                            href={route(
+                                                "category.show",
+                                                "freelance"
+                                            )}
                                         >
                                             Freelance
                                         </Link>
@@ -102,17 +117,29 @@ export default function Navbar() {
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <Link as="a" className="nav-link" href="#">
+                                <Link
+                                    as="a"
+                                    className="nav-link"
+                                    href={route("category.show", "magang")}
+                                >
                                     Magang
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link as="a" className="nav-link" href="#">
+                                <Link
+                                    as="a"
+                                    className="nav-link"
+                                    href={route("category.show", "pelatihan")}
+                                >
                                     Pelatihan
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link as="a" className="nav-link" href="#">
+                                <Link
+                                    as="a"
+                                    className="nav-link"
+                                    href={route("category.show", "informasi")}
+                                >
                                     Informasi
                                 </Link>
                             </li>

@@ -18,7 +18,8 @@ const Index = ({ categories }) => {
                             <li>
                                 <Link
                                     className="text-decoration-none hover:text-green-400 font-bold text-slate-600"
-                                    href={`/?kategori=${loker.slug}`}
+                                    href={route("category.show", loker.slug)}
+                                    // href={`/?kategori=${loker.slug}`}
                                 >
                                     {" "}
                                     {loker.name}
