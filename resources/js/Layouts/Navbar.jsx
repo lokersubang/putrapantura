@@ -11,7 +11,11 @@ export default function Navbar() {
             >
                 <div className="container-xl">
                     <Link className="navbar-brand p-2" href={route("home")}>
-                        <img src="/img/logo.png" width={135}></img>
+                        <img
+                            src="/img/logo.png"
+                            width={135}
+                            alt="lokersubang.com"
+                        />
                     </Link>
                     <button
                         className="navbar-toggler p-0 border-0"
