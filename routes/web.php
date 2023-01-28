@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\{ArticleController, CategoryController, DataArticleController, InformationController, LokerController, PostController, ProfileController};
 use App\Models\Category;
+use App\Models\Post;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -71,11 +72,6 @@ Route::get('/{post:slug}.html', [LokerController::class, 'show'])->name('post.sh
 
 // Category
 Route::get('kategori', [CategoryController::class, 'index'])->name('category');
-// Route::get('kategori/{category:slug}', function (Category $category) {
-//     return inertia('Blog/Category/Show', [
-//         'title' => $category->name,
-//         'lokers' => $category->post::paginate(5),
-//         'category' => $category->name
-//     ]);
-// })->name('category.show');
 Route::get('kategori/{category:slug}', [CategoryController::class, 'show'])->name('category.show');
+
+// sitemap
