@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #10172a" aria-label="Main navigation">
     <div class="container">
-        <a class="navbar-brand" href={{ route('home') }}> <img src="/img/logo.png" width="135"></img></a>
-        <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+        <a class="navbar-brand" href={{ route('home') }}> <img src="/img/logo.png" alt="lokersubang.com" loading="load"
+                width="135" /></a>
+        <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 

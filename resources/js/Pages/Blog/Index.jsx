@@ -38,15 +38,9 @@ const Index = (props) => {
             <Jumbotron />
 
             <div className="mt-3 prose max-w-none text-lg text-blue-900">
-                {title == null ? (
-                    <h3 className="border-b pb-2 border-dashed  m-0 fw-bold">
-                        Loker Terbaru
-                    </h3>
-                ) : (
-                    <h3 className="border-b pb-2 border-dashed  m-0 fw-bold">
-                        {title}
-                    </h3>
-                )}
+                <h3 className="border-b pb-2 border-dashed  m-0 fw-bold">
+                    Loker Terbaru
+                </h3>
             </div>
             <div className="row mb-3">
                 {lokers.length !== 0 ? (

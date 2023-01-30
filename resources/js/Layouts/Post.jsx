@@ -11,7 +11,7 @@ export default function Post(props) {
                         src={props.img}
                         alt={props.title}
                         loading="lazy"
-                        className="bd-placeholder-img flex-shrink-0 me-2 rounded p-2 object-center w-20 h-20"
+                        className="bd-placeholder-img flex-shrink-0 me-2 rounded p-2 object-center w-23 h-20"
                     />
                 </Link>
 
