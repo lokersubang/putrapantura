@@ -18,14 +18,14 @@ const Index = (props) => {
                     name="keywords"
                     content="loker subang, info loker subang, loker karawang, loker purwakarta, loker indramayu, loker majalengka, loker bandung"
                 />
-                <meta
-                    property="og:description"
-                    content="Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang terbaru dan terupdate setiap hari"
-                />
                 <meta name="author" content="Dadan Nurmaulana" />
                 <link rel="icon" href="/img/icon.ico" />
                 <link rel="icon" href="/img/icon.ico" />
                 <meta property="og:type" content="article" />
+                <meta
+                    property="og:description"
+                    content="Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang terbaru dan terupdate setiap hari"
+                />
                 <meta
                     property="og:title"
                     content="Loker Subang - Informasi Lowongan Kerja Subang dan

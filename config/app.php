@@ -181,7 +181,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        HTMLMin\HTMLMin\HTMLMinServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -209,6 +209,7 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'HTMLMin' => HTMLMin\HTMLMin\Facades\HTMLMin::class,
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
