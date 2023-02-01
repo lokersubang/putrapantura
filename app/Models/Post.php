@@ -10,7 +10,8 @@ use Spatie\Sluggable\SlugOptions;
 
 class Post extends Model
 {
-    use HasFactory, HasSlug, SoftDeletes;
+    //use HasFactory, HasSlug, SoftDeletes;
+    use HasFactory, HasSlug;
 
     protected $guarded = ['id'];
 

@@ -37,8 +37,7 @@ class LokerController extends Controller
 
         return inertia('Blog/Index', [
             'title' => $title,
-            'lokers' => Post::latest()->filter(request(['search', 'kategori']))->with(['category', 'user'])->fastPaginate(8)->onEachSide(2)
-        ]);
+            'lokers' => Post::latest()->filter(request(['search', 'kategori']))->with(['category', 'user'])->fastPaginate(8)->withQueryString()]);
     }
 
     public function show(Post $post)

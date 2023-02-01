@@ -36,7 +36,7 @@ const Faq = () => {
                         Salah satunya akan masuk Jobpost Google seperti berikut:
                     </p>
                     <img
-                        src="https://lokersubang.com/img/jobpost.JPG"
+                        src="https://lokersubang.com/public/img/jobpost.JPG"
                         className="img-fluid mt-2"
                     />
                     <br />

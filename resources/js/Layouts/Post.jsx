@@ -10,6 +10,8 @@ export default function Post(props) {
                     <img
                         src={props.img}
                         alt={props.title}
+                        width={120}
+                        height={20}           
                         loading="lazy"
                         className="bd-placeholder-img flex-shrink-0 me-2 rounded p-2 object-center w-23 h-20"
                     />

@@ -1,24 +1,29 @@
 import { Link, useForm, usePage } from "@inertiajs/inertia-react";
+import Ads from "@/Components/Ads";
 import React from "react";
 
 const Sidebar = () => {
     const { list } = usePage().props;
 
-    const { data, setData, post, reset, processing, errors } = useForm({
+    const { data, setData, get, reset, processing, errors } = useForm({
         search: "",
-        category: "",
-    });
+            });
 
     function submit(e) {
         e.preventDefault();
-        post(route("home"));
-        reset();
+        get(route("home"));
+       
     }
 
     return (
         <div>
-            <div className="prose max-w-none">
-                <div className="mb-3 p-3 bg-body rounded shadow-sm">
+            <div className="prose max-w-none">      
+      
+              <div className="mb-3 p-3 bg-white rounded shadow-sm">
+              
+               <Ads dataAdSlot='7521179607'/>
+              </div>
+              <div className="mb-3 p-3 bg-body rounded shadow-sm">
                     <form onSubmit={submit}>
                         <div className="input-group">
                             <input
