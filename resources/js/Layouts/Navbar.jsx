@@ -80,6 +80,18 @@ export default function Navbar() {
                                             Luar Kota
                                         </Link>
                                     </li>
+                                     <li>
+                                        <Link
+                                            as="a"
+                                            className="dropdown-item"
+                                            href={route(
+                                                "category.show",
+                                                "freelance"
+                                            )}
+                                        >
+                                           Freelance
+                                        </Link>
+                                    </li>
                                     <li>
                                         <hr className="dropdown-divider" />
                                     </li>
@@ -107,16 +119,19 @@ export default function Navbar() {
                                             CPNS
                                         </Link>
                                     </li>
+                                    
+                                        
+                                    
                                     <li>
                                         <Link
                                             as="a"
                                             className="dropdown-item"
                                             href={route(
                                                 "category.show",
-                                                "freelance"
+                                                "instansi"
                                             )}
                                         >
-                                            Freelance
+                                            Instansi
                                         </Link>
                                     </li>
                                 </ul>

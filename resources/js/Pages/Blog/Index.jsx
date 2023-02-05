@@ -40,8 +40,8 @@ const Index = (props) => {
             </Head>
 
             <Jumbotron />
-
-            <div className="mt-3 prose max-w-none text-lg text-blue-900">
+ <div className="p-4 rounded bg-white mt-3 shadow-sm ">
+            <div className="prose max-w-none text-lg text-blue-900">
                 <h3 className="border-b pb-2 border-dashed  m-0 fw-bold">
                     Loker Terbaru
                 </h3>
@@ -71,7 +71,7 @@ const Index = (props) => {
             </div>
 
             <Pagination links={links} />
-        </div>
+        </div></div>
     );
 };
 

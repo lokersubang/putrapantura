@@ -7,7 +7,7 @@ export default function HomeLayout({ children }) {
     return (
         <div>
             <Navbar />
-            <main className="container-xl">
+            <main className="container-md">
                 <div className="row mt-3">
                     <div className="col-md-8 mb-4">{children}</div>
                     <div className="col-md-4">

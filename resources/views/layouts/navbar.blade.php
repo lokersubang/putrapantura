@@ -19,24 +19,25 @@
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                         aria-expanded="false">Lowongan Kerja</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Subang</a></li>
-                        <li><a class="dropdown-item" href="#">Luar Kota</a></li>
-                        <li>
+                        <li><a class="dropdown-item" href="/kategori/loker-subang">Loker Subang</a></li>
+                        <li><a class="dropdown-item" href="/kategori/luar-kota">Luar Kota</a></li>
+                       <li><a class="dropdown-item" href="/kategori/freelance">Freelance</a></li>
+                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">CPNS</a></li>
-                        <li><a class="dropdown-item" href="#">BUMN</a></li>
-                        <li><a class="dropdown-item" href="#">Freelance</a></li>
+                        <li><a class="dropdown-item" href="/kategori/cpns">CPNS</a></li>
+                        <li><a class="dropdown-item" href="/kategori/bumn">BUMN</a></li>
+                        <li><a class="dropdown-item" href="/kategori/instansi">Instansi</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Magang</a>
+                    <a class="nav-link" href="/kategori/magang">Magang</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pelatihan</a>
+                    <a class="nav-link" href="/kategori/pelatihan">Pelatihan</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Informasi</a>
+                    <a class="nav-link" href="/kategori/informasi">Informasi</a>
                 </li>
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
