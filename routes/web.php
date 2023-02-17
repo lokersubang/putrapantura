@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{ArticleController, CategoryController, DataArticleController, InformationController, LokerController, PostController, ProfileController};
+use App\Http\Controllers\{ArticleController, CategoryController, DataArticleController, InformationController, PostController, ProfileController};
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Foundation\Application;
@@ -47,14 +47,14 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
     // Post
-    Route::get('tulis-lowongan', [ArticleController::class, 'create'])->name('article.create');
-    Route::post('tulis-lowongan', [ArticleController::class, 'store'])->name('article.store');
+    Route::get('tulis-artikel', [ArticleController::class, 'create'])->name('article.create');
+    Route::post('tulis-artikel', [ArticleController::class, 'store'])->name('article.store');
 
     // Data Post
-    Route::get('data-lowongan', [DataArticleController::class, 'index'])->name('article.index');
-    Route::get('data-lowongan/{id}', [DataArticleController::class, 'edit'])->name('article.edit');
-    Route::put('data-lowongan/{id}', [DataArticleController::class, 'update'])->name('article.update');
-    Route::delete('data-lowongan/{id}', [DataArticleController::class, 'destroy'])->name('article.delete');
+    Route::get('data-artikel', [DataArticleController::class, 'index'])->name('article.index');
+    Route::get('data-artikel/{id}', [DataArticleController::class, 'edit'])->name('article.edit');
+    Route::put('data-artikel/{id}', [DataArticleController::class, 'update'])->name('article.update');
+    Route::delete('data-artikel/{id}', [DataArticleController::class, 'destroy'])->name('article.delete');
 
 
     // Profil
@@ -66,9 +66,9 @@ Route::middleware('auth')->group(function () {
 require __DIR__ . '/auth.php';
 
 // Home Page
-Route::get('/', [LokerController::class, 'index'])->name('home');
-Route::post('/', [LokerController::class, 'index'])->name('home.post');
-Route::get('/{post:slug}.html', [LokerController::class, 'show'])->name('post.show');
+Route::get('/', [PostController::class, 'index'])->name('home');
+Route::post('/', [PostController::class, 'index'])->name('home.post');
+Route::get('/{post:slug}/', [PostController::class, 'show'])->name('post.show');
 
 // Category
 Route::get('kategori', [CategoryController::class, 'index'])->name('category');

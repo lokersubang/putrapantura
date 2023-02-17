@@ -10,13 +10,8 @@ export default function Navbar() {
                 aria-label="Main navigation"
             >
                 <div className="container-xl">
-                    <Link className="navbar-brand p-2" href={route("home")}>
-                        <img
-                            src="/img/logo.png"
-                            width={135}
-                            alt="lokersubang.com"
-                            loading="lazy"
-                        />
+                    <Link className="navbar-brand" href={route("home")}>
+                       Putra Pantura
                     </Link>
                     <button
                         className="navbar-toggler p-0 border-0"
@@ -45,113 +40,23 @@ export default function Navbar() {
                                     <i className="fa-solid fa-house"></i> Home
                                 </Link>
                             </li>
-                            <li className="nav-item dropdown m-0">
-                                <Link
-                                    as="a"
-                                    className="nav-link dropdown-toggle"
-                                    href="#"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
-                                    Lowongan Kerja
-                                </Link>
-                                <ul className="dropdown-menu ">
-                                    <li>
-                                        <Link
-                                            as="a"
-                                            className="dropdown-item"
-                                            href={route(
-                                                "category.show",
-                                                "loker-subang"
-                                            )}
-                                        >
-                                            Loker Subang
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            as="a"
-                                            className="dropdown-item"
-                                            href={route(
-                                                "category.show",
-                                                "luar-kota"
-                                            )}
-                                        >
-                                            Luar Kota
-                                        </Link>
-                                    </li>
-                                     <li>
-                                        <Link
-                                            as="a"
-                                            className="dropdown-item"
-                                            href={route(
-                                                "category.show",
-                                                "freelance"
-                                            )}
-                                        >
-                                           Freelance
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <hr className="dropdown-divider" />
-                                    </li>
-                                    <li>
-                                        <Link
-                                            as="a"
-                                            className="dropdown-item"
-                                            href={route(
-                                                "category.show",
-                                                "bumn"
-                                            )}
-                                        >
-                                            BUMN
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            as="a"
-                                            className="dropdown-item"
-                                            href={route(
-                                                "category.show",
-                                                "cpns"
-                                            )}
-                                        >
-                                            CPNS
-                                        </Link>
-                                    </li>
-                                    
-                                        
-                                    
-                                    <li>
-                                        <Link
-                                            as="a"
-                                            className="dropdown-item"
-                                            href={route(
-                                                "category.show",
-                                                "instansi"
-                                            )}
-                                        >
-                                            Instansi
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </li>
+                  
                             <li className="nav-item">
                                 <Link
                                     as="a"
                                     className="nav-link"
-                                    href={route("category.show", "magang")}
+                                    href={route("category.show", "aplikasi")}
                                 >
-                                    Magang
+                                    Aplikasi
                                 </Link>
                             </li>
                             <li className="nav-item">
                                 <Link
                                     as="a"
                                     className="nav-link"
-                                    href={route("category.show", "pelatihan")}
+                                    href={route("category.show", "game")}
                                 >
-                                    Pelatihan
+                                    Game
                                 </Link>
                             </li>
                             <li className="nav-item">
@@ -161,6 +66,24 @@ export default function Navbar() {
                                     href={route("category.show", "informasi")}
                                 >
                                     Informasi
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link
+                                    as="a"
+                                    className="nav-link"
+                                    href={route("category.show", "software")}
+                                >
+                                    Software
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link
+                                    as="a"
+                                    className="nav-link"
+                                    href={route("category.show", "tutorial")}
+                                >
+                                    Tutorial
                                 </Link>
                             </li>
                         </ul>
@@ -195,7 +118,7 @@ export default function Navbar() {
                                                 as="a"
                                             >
                                                 <i className="fa-solid fa-pencil"></i>{" "}
-                                                Tulis Lowongan
+                                                Tulis Artikel
                                             </a>
                                         </li>
                                         <li>
@@ -205,7 +128,7 @@ export default function Navbar() {
                                                 as="a"
                                             >
                                                 <i className="fa-solid fa-address-book"></i>{" "}
-                                                Data Lowongan
+                                                Data Artikel
                                             </a>
                                         </li>
                                         <li>
@@ -252,55 +175,6 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
-
-            <div className="nav-scroller bg-body shadow-sm">
-                <div className="container-xl">
-                    <nav className="nav" aria-label="Secondary navigation">
-                        <Link
-                            href={route("about")}
-                            className="nav-link text-decoration-none "
-                            as="a"
-                        >
-                            About
-                        </Link>
-                        <Link
-                            href={route("contact")}
-                            className="nav-link"
-                            as="a"
-                        >
-                            Contact
-                        </Link>
-                        <Link
-                            href={route("privacyPolicy")}
-                            className="nav-link"
-                            as="a"
-                        >
-                            Privacy Policy
-                        </Link>
-                        <Link
-                            href={route("disclaimer")}
-                            className="nav-link text-decoration-none"
-                            as="a"
-                        >
-                            Disclaimer
-                        </Link>
-                        <Link
-                            href={route("termOfService")}
-                            className="nav-link text-decoration-none "
-                            as="a"
-                        >
-                            Term Of Service
-                        </Link>
-                        <Link
-                            href={route("faq")}
-                            className="nav-link text-decoration-none "
-                            as="a"
-                        >
-                            FAQ?
-                        </Link>
-                    </nav>
-                </div>
-            </div>
         </div>
     );
 }

@@ -1,9 +1,8 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #10172a" aria-label="Main navigation">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="background-color: #10172a"
+    stylearia-label="Main navigation">
     <div class="container">
-        <a class="navbar-brand" href={{ route('home') }}> <img src="/img/logo.png" alt="lokersubang.com" loading="load"
-                width="135" /></a>
-        <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse"
-            aria-label="Toggle navigation">
+        <a class="navbar-brand" href={{ route('home') }}> Putra Pantura</a>
+        <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -15,29 +14,20 @@
                         Home
                     </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                        aria-expanded="false">Lowongan Kerja</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/kategori/loker-subang">Loker Subang</a></li>
-                        <li><a class="dropdown-item" href="/kategori/luar-kota">Luar Kota</a></li>
-                       <li><a class="dropdown-item" href="/kategori/freelance">Freelance</a></li>
-                         <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="/kategori/cpns">CPNS</a></li>
-                        <li><a class="dropdown-item" href="/kategori/bumn">BUMN</a></li>
-                        <li><a class="dropdown-item" href="/kategori/instansi">Instansi</a></li>
-                    </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="/kategori/aplikasi">Aplikasi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/kategori/magang">Magang</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/kategori/pelatihan">Pelatihan</a>
+                    <a class="nav-link" href="/kategori/game">Game</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/kategori/informasi">Informasi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/kategori/software">Software</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/kategori/tutorial">Tutorial</a>
                 </li>
             </ul>
             <ul class="navbar-nav mb-2 mb-lg-0">
@@ -56,13 +46,13 @@
                         <li>
                             <a class="dropdown-item" href="{{ route('article.create') }}">
                                 <i class="fa-solid fa-pencil"></i>
-                                Tulis Lowongan
+                                Tulis Artikel
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="{{ route('article.index') }}">
                                 <i class="fa-solid fa-address-book"></i>
-                                Data Lowongan
+                                Data Artikel
                             </a>
                         </li>
                         <li>
@@ -90,20 +80,3 @@
         </div>
     </div>
 </nav>
-
-<div class="nav-scroller bg-body shadow-sm">
-    <div class="container">
-        <nav class="nav" aria-label="Secondary navigation">
-            {{-- <a class="nav-link" href="#">
-                Friends
-                <span class="badge text-bg-light rounded-pill align-text-bottom">27</span>
-            </a> --}}
-            <a class="nav-link active" aria-current="page" href="#">About</a>
-            <a class="nav-link" href="#">Contact</a>
-            <a class="nav-link" href="#">Privacy Policy</a>
-            <a class="nav-link" href="#">Disclaimer</a>
-            <a class="nav-link" href="#">Ternm Of Service</a>
-            <a class="nav-link" href="#">FAQ?</a>
-        </nav>
-    </div>
-</div>

@@ -2,7 +2,7 @@
     <div class="row mt-3 mb-5">
         <div class="col-md-12">
             <div class="p-4 bg-white rounded">
-                <h2>Data Lowongan</h2>
+                <h2>Data Artikel</h2>
                 @if (session()->has('message'))
                     <div class="alert alert-warning alert-dismissible col-md-6 fade show" role="alert">
                         {{ session()->get('message') }}
@@ -14,8 +14,8 @@
                         <div class="col-md-6">
                             <form action="{{ route('article.index') }}" method="post">
                                 <div class="input-group">
-                                    <input type="text" class="form-control" name="search"
-                                        placeholder="Data lowongan" value="{{ request('search') }}">
+                                    <input type="text" class="form-control" name="search" placeholder="Data Artikel"
+                                        value="{{ request('search') }}">
                                     <button type="submit" class="btn btn-primary" id="basic-addon2">Cari</button>
                                 </div>
                             </form>

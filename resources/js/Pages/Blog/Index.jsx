@@ -11,16 +11,15 @@ const Index = (props) => {
         <div>
             <Head>
                 <title>
-                    Loker Subang - Informasi Lowongan Kerja Subang dan
-                    Sekitarnya.
+                    Putra Pantura - Informasi Digital Terkini   
                 </title>
                 <meta
                     name="keywords"
-                    content="loker subang, info loker subang, loker karawang, loker purwakarta, loker indramayu, loker majalengka, loker bandung"
+                    content="putra pantura"
                 />
                 <meta
                     name="description"
-                    content="Informasi lowongan kerja Subang dan Sekitarnya. Info loker subang terbaru dan terupdate setiap hari"
+                    content="Informasi Digital Terkini"
                 />
                 <meta name="author" content="Dadan Nurmaulana" />
                 <link rel="icon" href="/img/icon.ico" />
@@ -39,11 +38,11 @@ const Index = (props) => {
                 <meta property="og:image" content="/img/icon2.png" />
             </Head>
 
-            <Jumbotron />
- <div className="p-4 rounded bg-white mt-3 shadow-sm ">
+
+ <div className="p-4 rounded bg-white shadow-sm ">
             <div className="prose max-w-none text-lg text-blue-900">
                 <h3 className="border-b pb-2 border-dashed  m-0 fw-bold">
-                    Loker Terbaru
+                    Artikel Terbaru
                 </h3>
             </div>
             <div className="row mb-3">
@@ -63,7 +62,7 @@ const Index = (props) => {
                     <div className="col-md-6 mt-3">
                         <div className="alert alert-warning">
                             <h1 className="font-bold">
-                                Lowongan Tidak Ditemukan !
+                                Artikel Tidak Ditemukan !
                             </h1>
                         </div>
                     </div>

@@ -3,7 +3,7 @@
         <div class="row mb-5 mt-3">
             <div class="col-md-12">
                 <div class="p-4 rounded shadow-sm bg-white">
-                    <h2>Edit Lowongan</h2>
+                    <h2>Edit Artikel</h2>
                     @if (session()->has('message'))
                         <div class="alert alert-warning alert-dismissible col-md-6 fade show" role="alert">
                             {{ session()->get('message') }}
@@ -47,47 +47,20 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="body" class="form-label">Nama Perusahaan</label>
-                                    <input type="text" class="form-control @error('company') is-invalid @enderror"
-                                        id="company" name="company" placeholder="Masukan nama"
-                                        value="{{ old('company') ?? $article->company }}">
-                                    @error('company')
-                                        <div class="invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="mb-3">
-                                    <label for="body" class="form-label">Alamat Perusahaan</label>
-                                    <input type="text" class="form-control @error('address') is-invalid @enderror"
-                                        id="address" name="address" placeholder="Masukan alamat"
-                                        value="{{ old('address') ?? $article->address }}">
-                                    @error('address')
-                                        <div class="invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="mb-3">
                                     <label for="kategori" class="form-label">Kategori</label>
                                     <select id="kategori"
                                         class="form-select  @error('category_id') is-invalid @enderror"
                                         name="category_id">
                                         <option value="1" {{ $article->category_id == '1' ? 'selected' : '' }}>
-                                            CPNS</option>
+                                            Aplikasi</option>
                                         <option value="2" {{ $article->category_id == '2' ? 'selected' : '' }}>
-                                            BUMN</option>
+                                            Game</option>
                                         <option value="3" {{ $article->category_id == '3' ? 'selected' : '' }}>
-                                            Instansi</option>
-                                        <option value="4" {{ $article->category_id == '4' ? 'selected' : '' }}>
-                                            Loker Subang</option>
-                                        <option value="5" {{ $article->category_id == '5' ? 'selected' : '' }}>
-                                            Luar Kota</option>
-                                        <option value="6" {{ $article->category_id == '6' ? 'selected' : '' }}>
-                                            Freelance</option>
-                                        <option value="7" {{ $article->category_id == '7' ? 'selected' : '' }}>
-                                            Magang</option>
-                                        <option value="8" {{ $article->category_id == '8' ? 'selected' : '' }}>
-                                            Pelatihan</option>
-                                        <option value="9" {{ $article->category_id == '9' ? 'selected' : '' }}>
                                             Informasi</option>
-
+                                        <option value="4" {{ $article->category_id == '4' ? 'selected' : '' }}>
+                                            Software</option>
+                                        <option value="5" {{ $article->category_id == '5' ? 'selected' : '' }}>
+                                            Tutorial</option>
                                     </select>
                                     @error('category_id')
                                         <div class="invalid-feedback">{{ $message }}</div>

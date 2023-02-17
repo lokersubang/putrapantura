@@ -3,7 +3,7 @@
         <div class="row mb-5 mt-3">
             <div class="col-md-12">
                 <div class="p-4 rounded shadow-sm bg-white">
-                    <h2>Tulis Lowongan</h2>
+                    <h2>Tulis Artikel</h2>
                     @if (session()->has('message'))
                         <div class="alert alert-warning alert-dismissible col-md-6 fade show" role="alert">
                             {{ session()->get('message') }}
@@ -15,7 +15,7 @@
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="mb-3">
-                                    <label for="title" class="form-label">Judul lowongan</label>
+                                    <label for="title" class="form-label">Judul artikel</label>
                                     <input type="hidden" class="form-control @error('user_id') is-invalid @enderror"
                                         id="user_id" name="user_id" value={{ Auth::user()->id }}>
                                     <input type="text" class="form-control @error('title') is-invalid @enderror"
@@ -46,38 +46,16 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="body" class="form-label">Nama Perusahaan</label>
-                                    <input type="text" class="form-control @error('company') is-invalid @enderror"
-                                        id="company" name="company" placeholder="Masukan nama"
-                                        value={{ old('company') }}>
-                                    @error('company')
-                                        <div class="invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="mb-3">
-                                    <label for="body" class="form-label">Alamat Perusahaan</label>
-                                    <input type="text" class="form-control @error('address') is-invalid @enderror"
-                                        id="address" name="address" placeholder="Masukan alamat"
-                                        value={{ old('address') }}>
-                                    @error('address')
-                                        <div class="invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                                <div class="mb-3">
                                     <label for="kategori" class="form-label">Kategori</label>
                                     <select id="kategori"
                                         class="form-select  @error('category_id') is-invalid @enderror"
                                         name="category_id">
                                         <option selected>Pilih...</option>
-                                        <option value="1">CPNS</option>
-                                        <option value="2">BUMN</option>
-                                        <option value="3">Instansi</option>
-                                        <option value="4">Loker Subang</option>
-                                        <option value="5">Luar Kota</option>
-                                        <option value="6">Freelance</option>
-                                        <option value="7">Magang</option>
-                                        <option value="8">Pelatihan</option>
-                                        <option value="9">Informasi</option>
+                                        <option value="1">Aplikasi</option>
+                                        <option value="2">Game</option>
+                                        <option value="3">Informasi</option>
+                                        <option value="4">Software</option>
+                                        <option value="5">Tutorial</option>
                                     </select>
                                     @error('category_id')
                                         <div class="invalid-feedback">{{ $message }}</div>

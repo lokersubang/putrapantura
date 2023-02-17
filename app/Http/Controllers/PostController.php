@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 
-class LokerController extends Controller
+class PostController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -37,7 +37,8 @@ class LokerController extends Controller
 
         return inertia('Blog/Index', [
             'title' => $title,
-            'lokers' => Post::latest()->filter(request(['search', 'kategori']))->with(['category', 'user'])->fastPaginate(10)->withQueryString()]);
+            'lokers' => Post::latest()->filter(request(['search', 'kategori']))->with(['category', 'user'])->fastPaginate(10)->withQueryString()
+        ]);
     }
 
     public function show(Post $post)

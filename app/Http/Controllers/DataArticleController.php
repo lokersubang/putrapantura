@@ -24,13 +24,11 @@ class DataArticleController extends Controller
     public function update(Request $request, $id)
     {
         $attr = $request->validate([
-            'category_id' => 'required|in:1,2,3,4,5,6,7,8,9',
+            'category_id' => 'required|in:1,2,3,4,5',
             'user_id' => 'required',
             'title' => 'required',
             'description' => 'required|max:300',
             'body' => 'required',
-            'address' => 'required',
-            'company' => 'required',
             'image' => 'required'
         ]);
         Post::where('id', $id)->update($attr);

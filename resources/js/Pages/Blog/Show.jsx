@@ -113,12 +113,6 @@ const Show = ({ article }) => {
                 <meta property="og:image" content={article.image} />
             </Head>
 
-            <div className="alert alert-warning" role="alert">
-                <marquee>
-                    <i className="fas fa-bullhorn" /> Tahapan seleksi
-                    <strong> TIDAK DIPUNGUT BIAYA APAPUN !</strong>
-                </marquee>
-            </div>
             <div className="p-4 rounded bg-white shadow-sm ">
                 <nav aria-label="breadcrumb ">
                     <ol className="breadcrumb">
@@ -157,47 +151,16 @@ const Show = ({ article }) => {
                         <i className="fas fa-user-edit"></i> {article.user.name}
                     </span>
                     <div className="border-dashed border-b mb-3 mt-2 border-green-600" />
-                   <Ads dataAdSlot='7521179607'/>
 
                     <img
                         src={article.image}
                         alt={article.title}
                         className="img-fluid mt-2"
                         loading="lazy"
+                        width={350}
                     />
+
                     <div dangerouslySetInnerHTML={{ __html: article.body }} />
-
-                    {article.category_id == 9 || article.category_id == 8 ? (
-                        <div />
-                    ) : (
-                        <>
-                            <div className="p-3 mb-3 text-white bg-danger rounded">
-                                <h2 className="text-white mt-0">Penting !!!</h2>
-                                <p>
-                                    Apabila dalam proses recuitment terdapat
-                                    pemungutan biaya atau disarankan menggunakan
-                                    jasa travel dan sebagainya. Di harapkan
-                                    teman-teman tidak mengikutinya dan abaikan
-                                    saja.
-                                </p>
-                                <p>
-                                    Pihak lokersubang.com tidak menyarankan itu
-                                    semua. Karena pada dasarnya, proses
-                                    recruitment tidak memungut biaya sepeserpun.
-                                    Kecuali biaya akomodasi untuk mendatangi
-                                    lokasi tes, maka itu tanggung jawab pribadi
-                                    masing-masing.
-                                </p>
-                                <p>
-                                    Dan apabila terjadi penipuan dll.
-                                    lokersubang.com tidak akan bertanggung
-                                    jawab.
-                                </p>
-                            </div>
-                        </>
-                    )}
-
-                    <Ads dataAdSlot='7521179607'/>
 
                     <div className="border-dotted border-b mt-2 border-green-600" />
                     <div className="mt-3">
@@ -206,7 +169,7 @@ const Show = ({ article }) => {
                                 <img
                                     className="me-3"
                                     loading="lazy"
-                                    src="/img/icon.png"
+                                    src="/img/logo.webp"
                                     alt="lokersubang.com"
                                     width={70}
                                 />
@@ -221,8 +184,8 @@ const Show = ({ article }) => {
                                     </a>
                                 </h5>
                                 <span className="small text-muted lh-base">
-                                    Berbagi informasi lowongan pekerjaan subang
-                                    dan sekitarnya.
+                                    Berbagi Informasi Seputar Dunia Digital,
+                                    Gadget dan Komputer.
                                 </span>
                             </div>
                         </div>

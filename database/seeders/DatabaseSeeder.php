@@ -20,40 +20,24 @@ class DatabaseSeeder extends Seeder
 
         $category = [
             [
-                'name' => 'CPNS',
-                'slug' => 'cpns'
+                'name' => 'Aplikasi',
+                'slug' => 'aplikasi'
             ],
             [
-                'name' => 'BUMN',
-                'slug' => 'bumn'
-            ],
-            [
-                'name' => 'Instansi',
-                'slug' => 'instansi'
-            ],
-            [
-                'name' => 'Loker Subang',
-                'slug' => 'loker-subang'
-            ],
-            [
-                'name' => 'Luar Kota',
-                'slug' => 'luar-kota'
-            ],
-            [
-                'name' => 'Freelance',
-                'slug' => 'freelance'
-            ],
-            [
-                'name' => 'Magang',
-                'slug' => 'magang'
-            ],
-            [
-                'name' => 'Pelatihan',
-                'slug' => 'pelatihan'
+                'name' => 'Game',
+                'slug' => 'game'
             ],
             [
                 'name' => 'Informasi',
                 'slug' => 'informasi'
+            ],
+            [
+                'name' => 'Software',
+                'slug' => 'software'
+            ],
+            [
+                'name' => 'Tutorial',
+                'slug' => 'tutorial'
             ],
         ];
 
