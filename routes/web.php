@@ -23,7 +23,7 @@ use Inertia\Inertia;
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
-Route::group(['prefix' => 'data-lowongan/laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+Route::group(['prefix' => 'data-artikel/laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 

@@ -23,21 +23,16 @@ class PostController extends Controller
             $cat = Category::firstWhere('slug', request('kategori'));
             $title = $cat->name;
         };
-
-
-        //     ->add(Url::create('/kategori'))
-        //     ->add(Url::create('/contact_us'));
-
         $sitemap = Sitemap::create();
         $posts = Post::all();
         foreach ($posts as $post) {
-            $sitemap->add(Url::create("/{$post->slug}.html"));
+            $sitemap->add(Url::create("/{$post->slug}"));
         }
         $sitemap->writeToFile(public_path('sitemap.xml'));
 
         return inertia('Blog/Index', [
             'title' => $title,
-            'lokers' => Post::latest()->filter(request(['search', 'kategori']))->with(['category', 'user'])->fastPaginate(10)->withQueryString()
+            'posts' => Post::latest()->filter(request(['search', 'kategori']))->with(['category', 'user'])->fastPaginate(10)->withQueryString()
         ]);
     }
 

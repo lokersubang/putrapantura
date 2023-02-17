@@ -151,15 +151,14 @@ const Show = ({ article }) => {
                         <i className="fas fa-user-edit"></i> {article.user.name}
                     </span>
                     <div className="border-dashed border-b mb-3 mt-2 border-green-600" />
-
-                    <img
-                        src={article.image}
-                        alt={article.title}
-                        className="img-fluid mt-2"
-                        loading="lazy"
-                        width={350}
-                    />
-
+                    <center>
+                        <img
+                            src={article.image}
+                            alt={article.title}
+                            className="img-fluid mt-2"
+                            loading="lazy"
+                        />
+                    </center>
                     <div dangerouslySetInnerHTML={{ __html: article.body }} />
 
                     <div className="border-dotted border-b mt-2 border-green-600" />
