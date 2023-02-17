@@ -155,7 +155,7 @@ const Show = ({ article }) => {
                         <img
                             src={article.image}
                             alt={article.title}
-                            className="img-fluid mt-2"
+                            className="img-fluid mt-2 rounded"
                             loading="lazy"
                         />
                     </center>

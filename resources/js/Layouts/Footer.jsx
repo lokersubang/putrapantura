@@ -12,18 +12,12 @@ export default function Footer() {
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a
-                            href="https://t.me/loker-subang"
-                            className="nav-link text-muted"
-                        >
-                            Kontak
+                        <a href="/contact" className="nav-link text-muted">
+                            Contact
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a
-                            href="https://www.instagram.com/lokersubang_com/"
-                            className="nav-link text-muted"
-                        >
+                        <a href="/disclaimer" className="nav-link text-muted">
                             Disclaimer
                         </a>
                     </li>

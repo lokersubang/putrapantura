@@ -43,7 +43,7 @@
                                     </div>
                                     <div class="card-footer">
                                         <div class="text-right">
-                                            <a href="{{ $post->slug }}.html" target="_blank"
+                                            <a href="{{ $post->slug }}" target="_blank"
                                                 class="btn btn-sm btn-primary">
                                                 <i class="fas fa-eye"></i> Lihat Post
                                             </a>
