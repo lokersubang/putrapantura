@@ -13,7 +13,7 @@ export default function Post(props) {
                         loading="lazy"
                         width="100%"
                         height="100%"
-                        className="bd-placeholder-img flex-shrink-0  rounded object-center "
+                        className="bd-placeholder-img img-fluid flex-shrink-0  rounded object-center "
                     />
                 </Link>
 

@@ -7,17 +7,26 @@ export default function Footer() {
             <footer className="py-3 mb-5">
                 <ul className="nav justify-content-center border-b border-green-400 border-dashed pb-3 mb-3">
                     <li className="nav-item">
-                        <a href="/about" className="nav-link text-muted">
+                        <a
+                            href="/about"
+                            className="nav-link font-semibold text-slate-700"
+                        >
                             About
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="/contact" className="nav-link text-muted">
+                        <a
+                            href="/contact"
+                            className="nav-link font-semibold text-slate-700"
+                        >
                             Contact
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a href="/disclaimer" className="nav-link text-muted">
+                        <a
+                            href="/disclaimer"
+                            className="nav-link font-semibold text-slate-700"
+                        >
                             Disclaimer
                         </a>
                     </li>
