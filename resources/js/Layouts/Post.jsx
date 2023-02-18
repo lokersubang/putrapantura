@@ -5,7 +5,7 @@ import React from "react";
 export default function Post(props) {
     return (
         <div>
-            <div className="bg-white p-3 shadow-sm rounded mb-3 mt-3">
+            <div className="bg-white p-3 shadow-sm rounded mb-3">
                 <Link href={route("post.show", props.slug)}>
                     <img
                         src={props.img}

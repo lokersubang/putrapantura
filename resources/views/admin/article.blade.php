@@ -1,4 +1,4 @@
-<x-admin-layout title="Data Lowongan">
+<x-admin-layout title="Data Artikel">
     <div class="row mt-3 mb-5">
         <div class="col-md-12">
             <div class="p-4 bg-white rounded">

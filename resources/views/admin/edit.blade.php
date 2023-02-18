@@ -1,4 +1,4 @@
-<x-admin-layout title="Edit Lowongan">
+<x-admin-layout title="Edit Artikel">
     <div class="container">
         <div class="row mb-5 mt-3">
             <div class="col-md-12">

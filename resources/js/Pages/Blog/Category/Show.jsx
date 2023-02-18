@@ -6,7 +6,7 @@ import { Head } from "@inertiajs/inertia-react";
 import React from "react";
 
 const Show = (props) => {
-    const { data: lokers, links, from } = props.lokers;
+    const { data: posts, links, from } = props.posts;
     const { title } = props;
     return (
         <div>
@@ -14,23 +14,22 @@ const Show = (props) => {
                 <title>{title}</title>
                 <link rel="icon" href="/img/icon.ico" />
             </Head>
-            <div className="p-4 rounded bg-white shadow-sm ">
-                <Content>
-                    <h2 className="border-b border-dashed">{title}</h2>
-                </Content>
-                <div className="row mb-3">
-                    {lokers.map((loker) => (
-                        <div className="col-md-6" key={loker.id}>
-                            <Post
-                                title={loker.title}
-                                img={loker.image ?? "/img/404.jpg"}
-                                time={loker.created_at}
-                                slug={loker.slug}
-                            />
-                        </div>
-                    ))}
-                    <Pagination links={links} />
-                </div>
+
+            <Content>
+                <h2 className="border-b border-dashed">{title}</h2>
+            </Content>
+            <div className="row mb-3 mt-3">
+                {posts.map((post) => (
+                    <div className="col-md-6" key={post.id}>
+                        <Post
+                            title={post.title}
+                            img={post.image ?? "/img/404.jpg"}
+                            time={post.created_at}
+                            slug={post.slug}
+                        />
+                    </div>
+                ))}
+                <Pagination links={links} />
             </div>
         </div>
     );

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Dadan Nurmaulana">
-    <title>{{ $title ?? 'Administrator - lokersubang.com' }}</title>
+    <title>{{ $title ?? 'Administrator - putrapantura.com' }}</title>
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
-
+    <link rel="icon" href="/img/icon.ico" />
     <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="/fontawesome/css/brands.css" rel="stylesheet">
     <link href="/fontawesome/css/solid.css" rel="stylesheet">

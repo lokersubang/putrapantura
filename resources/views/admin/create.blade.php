@@ -1,4 +1,4 @@
-<x-admin-layout>
+<x-admin-layout title="Tulis Artikel">
     <div class="container">
         <div class="row mb-5 mt-3">
             <div class="col-md-12">

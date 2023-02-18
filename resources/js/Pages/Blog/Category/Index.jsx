@@ -10,19 +10,17 @@ const Index = ({ categories }) => {
                 <title>Semua Kategori</title>
                 <link rel="icon" href="/img/icon.ico" />
             </Head>
-            <div className="p-4 rounded bg-white shadow-sm ">
+            <div className="p-4 rounded bg-white shadow-sm">
                 <Content>
                     <h2>Semua Kategori</h2>
                     <ul>
-                        {categories.map((loker) => (
+                        {categories.map((category) => (
                             <li>
                                 <Link
                                     className="text-decoration-none hover:text-green-400 font-bold text-slate-600"
-                                    href={route("category.show", loker.slug)}
-                                    // href={`/?kategori=${loker.slug}`}
+                                    href={route("category.show", category.slug)}
                                 >
-                                    {" "}
-                                    {loker.name}
+                                    {category.name}
                                 </Link>
                             </li>
                         ))}

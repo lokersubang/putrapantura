@@ -15,7 +15,6 @@ const Index = (props) => {
                 <meta name="description" content="Informasi Digital Terkini" />
                 <meta name="author" content="Dadan Nurmaulana" />
                 <link rel="icon" href="/img/icon.ico" />
-                <link rel="icon" href="/img/icon.ico" />
                 <meta property="og:type" content="article" />
                 <meta
                     property="og:description"
@@ -35,7 +34,7 @@ const Index = (props) => {
                     Artikel Terbaru
                 </h3>
             </div>
-            <div className="row mb-3">
+            <div className="row mb-3 mt-3">
                 {posts.length !== 0 ? (
                     posts.map((post) => (
                         <div className="col-md-6" key={post.id}>
