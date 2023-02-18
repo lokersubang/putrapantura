@@ -18,15 +18,14 @@ const Index = (props) => {
                 <meta property="og:type" content="article" />
                 <meta
                     property="og:description"
-                    content="Informasi lowongan kerja Subang dan Sekitarnya. Info post subang terbaru dan terupdate setiap hari"
+                    content="Website yang membahas seputar Dunia Tekno, Gadget dan Komputer Terbaru"
                 />
                 <meta
                     property="og:title"
-                    content="post Subang - Informasi Lowongan Kerja Subang dan
-                    Sekitarnya"
+                    content="Putra Pantura - Informasi Digital Terkini"
                 />
                 <meta property="og:url" content="https:/postsubang.com" />
-                <meta property="og:image" content="/img/icon2.png" />
+                <meta property="og:image" content="/img/logo.webp" />
             </Head>
 
             <div className="prose max-w-none text-lg text-blue-900">

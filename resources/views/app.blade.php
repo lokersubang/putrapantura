@@ -7,6 +7,7 @@
     {{-- <title inertia>{{ config('app.name', 'Laravel') }}</title> --}}
 
     <!-- our project just needs Font Awesome Solid + Brands -->
+    <link rel="icon" href="/img/icon.ico" />
     <link href="/fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="/fontawesome/css/brands.css" rel="stylesheet">
     <link href="/fontawesome/css/solid.css" rel="stylesheet">
