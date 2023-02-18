@@ -12,6 +12,7 @@ export default function Post(props) {
                         alt={props.title}
                         loading="lazy"
                         width="100%"
+                        height="100%"
                         className="bd-placeholder-img flex-shrink-0  rounded object-center "
                     />
                 </Link>
