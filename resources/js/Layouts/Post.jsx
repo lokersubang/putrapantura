@@ -11,9 +11,9 @@ export default function Post(props) {
                         src={props.img}
                         alt={props.title}
                         loading="lazy"
-                        width="100%"
-                        height="100%"
-                        className="bd-placeholder-img flex-shrink-0  rounded object-center "
+                        width={300}
+                        height={300}
+                        className="card-img-top rounded"
                     />
                 </Link>
 
