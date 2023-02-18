@@ -24,7 +24,7 @@ const Index = (props) => {
                     property="og:title"
                     content="Putra Pantura - Informasi Digital Terkini"
                 />
-                <meta property="og:url" content="https:/postsubang.com" />
+                <meta property="og:url" content="https:/putrapantura.com" />
                 <meta property="og:image" content="/img/logo.webp" />
             </Head>
 
