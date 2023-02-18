@@ -73,10 +73,10 @@ const Show = ({ article }) => {
                                     loading="lazy"
                                     src="/img/logo.webp"
                                     alt="lokersubang.com"
-                                    width={70}
+                                    width={50}
                                 />
                             </a>
-                            <div className="lh-1">
+                            <div className="lh-1 ml-4">
                                 <h5 className="leading-normal mb-2">
                                     <a
                                         href="https://web.facebook.com/dadannurmaulana"
