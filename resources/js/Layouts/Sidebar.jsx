@@ -53,7 +53,7 @@ const Sidebar = () => {
                                 <Link
                                     as="a"
                                     href={route("post.show", item.slug)}
-                                    className="text-decoration-none text-gray-700 hover:text-green-400"
+                                    className="text-decoration-none text-gray-500 hover:text-green-400"
                                 >
                                     {item.title}
                                 </Link>

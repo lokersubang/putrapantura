@@ -21,7 +21,7 @@ export default function Post(props) {
                     {props.category}
                 </span>
                 <Link href={route("post.show", props.slug)}>
-                    <h5 className="card-title font-bold hover:text-green-500 mb-3">
+                    <h5 className="card-title text-stale-700 font-bold hover:text-green-500 mb-3">
                         {props.title}
                     </h5>
                 </Link>
