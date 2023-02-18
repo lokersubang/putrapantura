@@ -1,4 +1,3 @@
-import Ads from "@/Components/Ads";
 import Content from "@/Layouts/Content";
 import HomeLayout from "@/Layouts/HomeLayout";
 import { Head } from "@inertiajs/inertia-react";
@@ -44,25 +43,7 @@ const Show = ({ article }) => {
                         </li>
                     </ol>
                 </nav>
-                {article.category_id == 9 || article.category_id == 8 ? (
-                    <>
-                        <script
-                            type="application/ld+json"
-                            dangerouslySetInnerHTML={{
-                                __html: JSON.stringify(articleData),
-                            }}
-                        />
-                    </>
-                ) : (
-                    <>
-                        <script
-                            type="application/ld+json"
-                            dangerouslySetInnerHTML={{
-                                __html: JSON.stringify(job1),
-                            }}
-                        />
-                    </>
-                )}
+
                 <Content>
                     <h1 className="mb-3">{article.title}</h1>
                     <span className="text-sm pe-4">
@@ -117,7 +98,7 @@ const Show = ({ article }) => {
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(job2),
+                        __html: JSON.stringify(articleData),
                     }}
                 />
             </div>
