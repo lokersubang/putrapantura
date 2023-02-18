@@ -21,84 +21,6 @@ const Show = ({ article }) => {
         ],
     };
 
-    const job1 = {
-        "@context": "https://schema.org",
-        "@type": "JobPost",
-        headline: article.title,
-        description: article.body,
-        image: [article.image],
-        datePublished: article.created_at,
-        dateModified: article.updated_at,
-        author: [
-            {
-                "@type": "Person",
-                name: "Dadan Nurmaulana",
-                url: "https://web.facebook.com/dadannurmaulana",
-            },
-            {
-                "@type": "Person",
-                name: "Dadan Nurmaulana",
-                url: "https://web.facebook.com/dadannurmaulana",
-            },
-        ],
-    };
-
-    const job2 = {
-        "@context": "http://schema.org/",
-        "@type": "JobPosting",
-        title: article.title,
-        description: article.body,
-        url: `${article.slug}.html`,
-        datePosted: article.created_at,
-        validThrough: "2024-03-18T00:00",
-        employmentType: "FULL_TIME",
-        hiringOrganization: {
-            "@type": "Organization",
-            name: article.company,
-            sameAs: `https://lokersubang.com/${article.slug}.html`,
-            logo: article.image,
-        },
-        jobLocation: {
-            "@type": "Place",
-            address: {
-                "@type": "PostalAddress",
-                streetAddress: article.address,
-                addressLocality: article.address,
-                addressRegion: "Jawa Barat",
-                postalCode: "41256",
-                addressCountry: "Indonesia",
-            },
-        },
-        baseSalary: {
-            "@type": "MonetaryAmount",
-            currency: "IDR",
-            value: {
-                "@type": "QuantitativeValue",
-                value: (() => {
-                    if (article.address === "Karawang") return "5000000";
-                    if (article.address === "Subang")
-                        return "1800000 - 4000000";
-                    if (article.address === "Purwakarta")
-                        return "2000000 - 4500000";
-                    if (article.address === "Bekasi")
-                        return "2000000 - 5000000";
-                    if (article.address === "Cikarang")
-                        return "2000000 - 5000000";
-                    if (article.address === "Bandung")
-                        return "2000000 - 4500000";
-                    if (article.address === "Indramayu")
-                        return "1800000 - 3500000";
-                    if (article.address === "Majalengka")
-                        return "2000000 - 3500000";
-                    if (article.address === "Cirebon")
-                        return "2000000 - 4000000";
-                    else return "2000000 - 4000000";
-                })(),
-                unitText: "MONTH",
-            },
-        },
-    };
-
     return (
         <div>
             <Head>
@@ -191,18 +113,13 @@ const Show = ({ article }) => {
                         <div className="border-dotted border-b mt-2 border-green-600" />
                     </div>
                 </Content>
-                {article.category_id == 9 || article.category_id == 8 ? (
-                    <></>
-                ) : (
-                    <>
-                        <script
-                            type="application/ld+json"
-                            dangerouslySetInnerHTML={{
-                                __html: JSON.stringify(job2),
-                            }}
-                        />
-                    </>
-                )}
+
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(job2),
+                    }}
+                />
             </div>
         </div>
     );
