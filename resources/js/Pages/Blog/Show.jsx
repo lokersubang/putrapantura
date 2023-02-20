@@ -4,39 +4,6 @@ import { Head } from "@inertiajs/inertia-react";
 import moment from "moment/moment";
 
 const Show = ({ article }) => {
-    const artikel = {
-        "@context": "https://schema.org",
-        "@type": "NewsArticle",
-        headline: article.title,
-        image: [article.image],
-        datePublished: moment(article.created_at).format(),
-        dateModified: moment(article.created_at).format(),
-        author: [
-            {
-                "@type": "Person",
-                name: "Dadan Nurmaulana",
-                url: "https://web.facebook.com/dadannurmaulana",
-            },
-        ],
-    };
-
-    const Aplikasi = {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        name: article.title,
-        operatingSystem: "ANDROID",
-        applicationCategory: "GameApplication",
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.8",
-            ratingCount: "1864",
-        },
-        offers: {
-            "@type": "Offer",
-            price: "0",
-        },
-    };
-
     return (
         <div>
             <Head>
@@ -111,19 +78,6 @@ const Show = ({ article }) => {
                         <div className="border-dotted border-b mt-2 border-green-600" />
                     </div>
                 </Content>
-
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(artikel),
-                    }}
-                />
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(Aplikasi),
-                    }}
-                />
             </div>
         </div>
     );
