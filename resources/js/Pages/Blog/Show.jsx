@@ -121,7 +121,7 @@ const Show = ({ article }) => {
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(aplikasi),
+                        __html: JSON.stringify(Aplikasi),
                     }}
                 />
             </div>
