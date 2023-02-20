@@ -4,7 +4,7 @@ import { Head } from "@inertiajs/inertia-react";
 import moment from "moment/moment";
 
 const Show = ({ article }) => {
-    const articleData = {
+    const artikel = {
         "@context": "https://schema.org",
         "@type": "NewsArticle",
         headline: article.title,
@@ -18,6 +18,23 @@ const Show = ({ article }) => {
                 url: "https://web.facebook.com/dadannurmaulana",
             },
         ],
+    };
+
+    const Aplikasi = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: article.title,
+        operatingSystem: "ANDROID",
+        applicationCategory: "GameApplication",
+        aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.8",
+            ratingCount: "1864",
+        },
+        offers: {
+            "@type": "Offer",
+            price: "0",
+        },
     };
 
     return (
@@ -98,7 +115,13 @@ const Show = ({ article }) => {
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
-                        __html: JSON.stringify(articleData),
+                        __html: JSON.stringify(artikel),
+                    }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(aplikasi),
                     }}
                 />
             </div>
