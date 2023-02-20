@@ -25,6 +25,7 @@ const Show = (props) => {
                             title={post.title}
                             img={post.image ?? "/img/404.jpg"}
                             time={post.created_at}
+                            category={post.category.name}
                             slug={post.slug}
                         />
                     </div>
