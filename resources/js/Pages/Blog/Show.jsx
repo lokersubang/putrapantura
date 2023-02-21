@@ -4,6 +4,35 @@ import { Head } from "@inertiajs/inertia-react";
 import moment from "moment/moment";
 
 const Show = ({ article }) => {
+    const articleData = {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        headline: article.title,
+        image: [article.image],
+        datePublished: moment(article.created_at).format(),
+        dateModified: moment(article.created_at).format(),
+        author: [
+            {
+                "@type": "Person",
+                name: "Dadan Nurmaulana",
+                url: "https://web.facebook.com/dadannurmaulana",
+            },
+        ],
+    };
+
+    const ratingData = {
+        "@context": "https://schema.org/",
+        "@type": "Book",
+        name: "Artikel putrapantura.com",
+        aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5",
+            ratingCount: "1365",
+            bestRating: "5",
+            worstRating: "1",
+        },
+    };
+
     return (
         <div>
             <Head>
@@ -78,6 +107,18 @@ const Show = ({ article }) => {
                         <div className="border-dotted border-b mt-2 border-green-600" />
                     </div>
                 </Content>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(articleData),
+                    }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(ratingData),
+                    }}
+                />
             </div>
         </div>
     );
