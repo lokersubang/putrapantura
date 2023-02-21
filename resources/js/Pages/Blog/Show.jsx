@@ -33,6 +33,25 @@ const Show = ({ article }) => {
         },
     };
 
+    const breadcrumbData = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: article.category.name,
+                item: `https://putrapantura.com/kategori/${article.category.name}`,
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: article.title,
+                item: `https://putrapantura.com/${article.slug}`,
+            },
+        ],
+    };
+
     return (
         <div>
             <Head>
@@ -107,6 +126,8 @@ const Show = ({ article }) => {
                         <div className="border-dotted border-b mt-2 border-green-600" />
                     </div>
                 </Content>
+
+                {/* Schema Google */}
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
@@ -119,6 +140,14 @@ const Show = ({ article }) => {
                         __html: JSON.stringify(ratingData),
                     }}
                 />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(breadcrumbData),
+                    }}
+                />
+
+                {/* End Schema Google */}
             </div>
         </div>
     );
