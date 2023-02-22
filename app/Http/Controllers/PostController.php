@@ -32,7 +32,7 @@ class PostController extends Controller
 
         return inertia('Blog/Index', [
             'title' => $title,
-            'posts' => Post::latest()->filter(request(['search', 'kategori']))->with(['category', 'user'])->fastPaginate(10)->withQueryString()
+            'posts' => Post::latest()->filter(request(['search', 'kategori']))->with(['category', 'user'])->fastPaginate(6)->withQueryString()
         ]);
     }
 
