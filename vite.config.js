@@ -12,6 +12,10 @@ export default defineConfig({
         react(),
     ],
     ssr: {
+<<<<<<< HEAD
         noExternal: ["@inertiajs/server"],
+=======
+        noExternal: ['laravel-vite-plugin','@inertiajs/server'],
+>>>>>>> 3adefcc (Hapus vite Config)
     },
 });
