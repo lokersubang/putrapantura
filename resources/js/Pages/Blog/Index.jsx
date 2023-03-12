@@ -11,6 +11,7 @@ const Index = (props) => {
         <div>
             <Head>
                 <title>Putra Pantura - Informasi Digital Terkini</title>
+                 <link rel="canonical" href="https://putrapantura.com/" />
                 <meta name="keywords" content="putra pantura" />
                 <meta name="description" content="Informasi Digital Terkini" />
                 <meta name="author" content="Dadan Nurmaulana" />

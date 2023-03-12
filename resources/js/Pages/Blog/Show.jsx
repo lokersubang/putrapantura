@@ -56,6 +56,7 @@ const Show = ({ article }) => {
         <div>
             <Head>
                 <title>{article.title}</title>
+                <link rel="canonical" href={`https://putrapantura.com/${article.slug}`} />
                 <meta name="keywords" content={article.title} />
                 <meta name="description" content={article.description} />
                 <link rel="icon" href="/img/icon.ico" />
